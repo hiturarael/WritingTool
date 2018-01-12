@@ -1,0 +1,10 @@
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\bin\Debug\WritingToolForm.exe.config
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\bin\Debug\WritingToolForm.exe
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\bin\Debug\WritingToolForm.pdb
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.csprojResolveAssemblyReference.cache
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.Main.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.Properties.Resources.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.csproj.GenerateResource.Cache
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.csproj.CoreCompileInputs.cache
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.exe
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.pdb
