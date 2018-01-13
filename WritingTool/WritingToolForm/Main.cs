@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using WritingToolForm.ProjectMenu;
+
 namespace WritingToolForm
 {
     public partial class Main : Form
@@ -25,6 +27,13 @@ namespace WritingToolForm
         private void Main_Load(object sender, EventArgs e)
         {
             lblVrsnNum.Text = Application.ProductVersion;
+        }
+
+        private void btnNewPrj_Click(object sender, EventArgs e)
+        {
+            ProjectMenu.ProjectMenu newProject = new ProjectMenu.ProjectMenu();
+
+            newProject.ShowDialog();
         }
     }
 }

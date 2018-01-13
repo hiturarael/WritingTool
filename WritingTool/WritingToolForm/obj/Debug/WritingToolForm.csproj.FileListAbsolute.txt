@@ -8,3 +8,7 @@ C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Deb
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.csproj.CoreCompileInputs.cache
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.exe
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.pdb
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.NewForms.Chapter.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.NewNovel.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.ProjectMenu.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.RaceManagement.RaceManagement.resources
