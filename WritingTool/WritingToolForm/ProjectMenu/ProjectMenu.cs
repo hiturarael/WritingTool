@@ -51,5 +51,11 @@ namespace WritingToolForm.ProjectMenu
             ArtifactManagement.ArtifactManagement artifactForm = new ArtifactManagement.ArtifactManagement();
             artifactForm.ShowDialog();
         }
+
+        private void BtnPrjStatus_Click(object sender, EventArgs e)
+        {
+            ProjectStats.ProjectStats statForm = new ProjectStats.ProjectStats();
+            statForm.ShowDialog();
+        }
     }
 }

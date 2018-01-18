@@ -106,6 +106,7 @@
             this.btnPrjStatus.TabIndex = 6;
             this.btnPrjStatus.Text = "Project Stats";
             this.btnPrjStatus.UseVisualStyleBackColor = true;
+            this.btnPrjStatus.Click += new System.EventHandler(this.BtnPrjStatus_Click);
             // 
             // btnExit
             // 
