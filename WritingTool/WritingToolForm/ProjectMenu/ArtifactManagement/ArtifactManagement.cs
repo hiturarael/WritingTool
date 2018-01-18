@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.ProjectMenu
+namespace WritingToolForm.ProjectMenu.ArtifactManagement
 {
-    public partial class CharacterForm : Form
+    public partial class ArtifactManagement : Form
     {
-        public CharacterForm()
+        public ArtifactManagement()
         {
             InitializeComponent();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

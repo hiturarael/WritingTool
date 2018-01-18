@@ -12,3 +12,4 @@ C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Deb
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.NewNovel.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.ProjectMenu.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.RaceManagement.RaceManagement.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.CharacterForm.resources

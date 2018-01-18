@@ -48,7 +48,6 @@
             this.grpBoxLoadPrj.Size = new System.Drawing.Size(340, 358);
             this.grpBoxLoadPrj.TabIndex = 0;
             this.grpBoxLoadPrj.TabStop = false;
-            this.grpBoxLoadPrj.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // listBoxPrjs
             // 
@@ -96,7 +95,7 @@
             this.btnNewPrj.TabIndex = 0;
             this.btnNewPrj.Text = "New Project";
             this.btnNewPrj.UseVisualStyleBackColor = true;
-            this.btnNewPrj.Click += new System.EventHandler(this.btnNewPrj_Click);
+            this.btnNewPrj.Click += new System.EventHandler(this.BtnNewPrj_Click);
             // 
             // lblVrsnNum
             // 
