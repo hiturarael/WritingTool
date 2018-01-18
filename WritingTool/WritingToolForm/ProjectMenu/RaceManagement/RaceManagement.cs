@@ -16,5 +16,10 @@ namespace WritingToolForm.ProjectMenu.RaceManagement
         {
             InitializeComponent();
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

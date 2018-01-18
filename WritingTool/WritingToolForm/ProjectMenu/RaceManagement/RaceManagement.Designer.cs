@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddRace = new System.Windows.Forms.Button();
+            this.btnLoadRace = new System.Windows.Forms.Button();
             this.lbRaces = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDelRace = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAddRace
             // 
-            this.button1.Location = new System.Drawing.Point(12, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add New Race";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddRace.Location = new System.Drawing.Point(12, 23);
+            this.btnAddRace.Name = "btnAddRace";
+            this.btnAddRace.Size = new System.Drawing.Size(104, 23);
+            this.btnAddRace.TabIndex = 0;
+            this.btnAddRace.Text = "Add New Race";
+            this.btnAddRace.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnLoadRace
             // 
-            this.button2.Location = new System.Drawing.Point(12, 52);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Load Race";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLoadRace.Location = new System.Drawing.Point(12, 52);
+            this.btnLoadRace.Name = "btnLoadRace";
+            this.btnLoadRace.Size = new System.Drawing.Size(104, 23);
+            this.btnLoadRace.TabIndex = 1;
+            this.btnLoadRace.Text = "Load Race";
+            this.btnLoadRace.UseVisualStyleBackColor = true;
             // 
             // lbRaces
             // 
@@ -61,34 +61,35 @@
             this.lbRaces.Size = new System.Drawing.Size(352, 251);
             this.lbRaces.TabIndex = 2;
             // 
-            // button3
+            // btnDelRace
             // 
-            this.button3.Location = new System.Drawing.Point(12, 81);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Delete Race";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelRace.Location = new System.Drawing.Point(12, 81);
+            this.btnDelRace.Name = "btnDelRace";
+            this.btnDelRace.Size = new System.Drawing.Size(104, 23);
+            this.btnDelRace.TabIndex = 3;
+            this.btnDelRace.Text = "Delete Race";
+            this.btnDelRace.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnExit
             // 
-            this.button4.Location = new System.Drawing.Point(12, 251);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Main Menu";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(12, 251);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Main Menu";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // RaceManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 296);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnDelRace);
             this.Controls.Add(this.lbRaces);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLoadRace);
+            this.Controls.Add(this.btnAddRace);
             this.Name = "RaceManagement";
             this.Text = "RaceManagement";
             this.ResumeLayout(false);
@@ -97,10 +98,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddRace;
+        private System.Windows.Forms.Button btnLoadRace;
         private System.Windows.Forms.ListBox lbRaces;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelRace;
+        private System.Windows.Forms.Button btnExit;
     }
 }
