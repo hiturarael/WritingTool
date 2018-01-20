@@ -24,7 +24,7 @@ namespace WritingToolForm
 
         private void BtnNewPrj_Click(object sender, EventArgs e)
         {
-            ProjectMenu.ProjectMenu newProject = new ProjectMenu.ProjectMenu();
+            NewForms.Novel newProject = new NewForms.Novel();
 
             newProject.ShowDialog();
         }

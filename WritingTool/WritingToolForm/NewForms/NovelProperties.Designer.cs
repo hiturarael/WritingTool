@@ -1,6 +1,6 @@
-﻿namespace WritingToolForm
+﻿namespace WritingToolForm.NewForms
 {
-    partial class NewNovel
+    partial class Novel
     {
         /// <summary>
         /// Required designer variable.
@@ -75,6 +75,7 @@
             this.btnSaveNvlProp.TabIndex = 4;
             this.btnSaveNvlProp.Text = "Save";
             this.btnSaveNvlProp.UseVisualStyleBackColor = true;
+            this.btnSaveNvlProp.Click += new System.EventHandler(this.BtnSaveNvlProp_Click);
             // 
             // btnCancelNvlProp
             // 
@@ -88,8 +89,43 @@
             // lbGenres
             // 
             this.lbGenres.FormattingEnabled = true;
+            this.lbGenres.Items.AddRange(new object[] {
+            "Fiction",
+            "Non Fiction",
+            "Science Fiction",
+            "Satire",
+            "Drama",
+            "Action and Adventure",
+            "Romance",
+            "Mystery",
+            "Horror",
+            "Self Help",
+            "Health",
+            "Guide",
+            "Travel",
+            "Children\'s",
+            "Religion, Spirituality, & New Age",
+            "Science",
+            "History",
+            "Math",
+            "Anthology",
+            "Poetry",
+            "Encyclopedia",
+            "Dictionary",
+            "Comic",
+            "Art",
+            "Cookbook",
+            "Diary",
+            "Journal",
+            "Prayer Book",
+            "Series",
+            "Trilogy",
+            "Biography",
+            "Autobiography",
+            "Fantasy"});
             this.lbGenres.Location = new System.Drawing.Point(190, 146);
             this.lbGenres.Name = "lbGenres";
+            this.lbGenres.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbGenres.Size = new System.Drawing.Size(402, 69);
             this.lbGenres.TabIndex = 6;
             // 

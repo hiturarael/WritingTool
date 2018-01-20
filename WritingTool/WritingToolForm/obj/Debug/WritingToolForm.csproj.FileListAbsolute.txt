@@ -9,10 +9,12 @@ C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Deb
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.exe
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.pdb
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.NewForms.Chapter.resources
-C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.NewNovel.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.ProjectMenu.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.RaceManagement.RaceManagement.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.ArtifactManagement.ArtifactManagement.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.CharacterManagement.CharacterForm.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.CreatureManagement.CreatureManagement.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.LocationManagement.LocationManagement.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.ChapterManagement.ChapterForm.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.ProjectStats.ProjectStats.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.NewForms.Novel.resources
