@@ -164,38 +164,39 @@ namespace WritingToolForm
             {
 
                 writer.WriteStartDocument();
+                writer.WriteStartElement("Project");
 
                 #region Cover Page
                 writer.WriteStartElement("cover");
                 writer.WriteElementString("Title", title);
                 writer.WriteElementString("Author", author);
+                writer.WriteEndElement();
+                #endregion
+
+                #region Genres
+                writer.WriteStartElement("genres");
+
+                foreach (string genre in prj.novel.GetGenres())
+                {
+                    writer.WriteStartElement("genre");
+                    writer.WriteString(genre);
+                    writer.WriteEndElement();
+                }
 
                 writer.WriteEndElement();
                 #endregion
 
-                //#region Genres
-                //writer.WriteStartElement("genres");
+                #region Synopsis
+                writer.WriteStartElement("synopsi");
 
-                //foreach(string genre in prj.novel.GetGenres())
-                //{
-                //    writer.WriteStartElement("genre");
-                //    writer.WriteString(genre);
-                //    writer.WriteEndElement();
-                //}
+                writer.WriteStartElement("synopsis");
+                writer.WriteString(prj.novel.GetSynopsis());
+                writer.WriteEndElement();
 
-                //writer.WriteEndElement();
-                //#endregion
+                writer.WriteEndElement();
+                #endregion
 
-                //#region Synopsis
-                //writer.WriteStartElement("synopsi");
-
-                //writer.WriteStartElement("synopsis");
-                //writer.WriteString(prj.novel.GetSynopsis());
-                //writer.WriteEndElement();
-
-                //writer.WriteEndElement();
-                //#endregion
-
+                writer.WriteEndElement();
                 writer.WriteEndDocument();
             }
             
