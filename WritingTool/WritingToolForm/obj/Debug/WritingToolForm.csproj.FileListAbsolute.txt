@@ -17,4 +17,4 @@ C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Deb
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.LocationManagement.LocationManagement.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.ChapterManagement.ChapterForm.resources
 C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.ProjectMenu.ProjectStats.ProjectStats.resources
-C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.NewForms.Novel.resources
+C:\Users\Alicia\Documents\GitHub\WritingTool\WritingTool\WritingToolForm\obj\Debug\WritingToolForm.NewForms.ProjectForm.resources

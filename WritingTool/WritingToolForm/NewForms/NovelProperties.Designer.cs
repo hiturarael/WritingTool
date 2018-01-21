@@ -1,6 +1,6 @@
 ﻿namespace WritingToolForm.NewForms
 {
-    partial class Novel
+    partial class ProjectForm
     {
         /// <summary>
         /// Required designer variable.
