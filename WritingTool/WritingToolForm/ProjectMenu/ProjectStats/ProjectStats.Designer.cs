@@ -178,6 +178,7 @@
             this.btnEditCover.TabIndex = 10;
             this.btnEditCover.Text = "Edit";
             this.btnEditCover.UseVisualStyleBackColor = true;
+            this.btnEditCover.Click += new System.EventHandler(this.BtnEditCover_Click);
             // 
             // ProjectStats
             // 

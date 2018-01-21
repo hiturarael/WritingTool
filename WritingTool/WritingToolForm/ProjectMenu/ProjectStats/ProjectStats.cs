@@ -30,7 +30,7 @@ namespace WritingToolForm.ProjectMenu.ProjectStats
             {
                 genres += genre;
 
-                if(curGenre > genreCount)
+                if(curGenre < genreCount)
                 { genres += ", "; }
             }
 
@@ -38,6 +38,13 @@ namespace WritingToolForm.ProjectMenu.ProjectStats
             lblTitle.Text = project.novel.GetTitle();
             lblGenres.Text = genres;
             rtbSynopsis.Text = project.novel.GetSynopsis();
+        }
+
+        private void BtnEditCover_Click(object sender, EventArgs e)
+        {
+            NewForms.ProjectForm form = new NewForms.ProjectForm(project);
+
+            form.ShowDialog();
         }
     }
 }

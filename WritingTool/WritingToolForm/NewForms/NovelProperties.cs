@@ -23,6 +23,23 @@ namespace WritingToolForm.NewForms
         {
             InitializeComponent();
             project = prj;
+
+            if (prj.novel.GetTitle() != "")
+            { txtNvlTitle.Text = prj.novel.GetTitle(); }
+
+            if (prj.novel.GetAuthor() != "")
+            { txtNvlAuthor.Text = prj.novel.GetAuthor(); }
+
+            if(prj.novel.GetGenres().Count() > 0)
+            {
+                foreach (int index in prj.novel.GetGenreIndexes())
+                {
+                    lbGenres.SetSelected(index, true);
+                }
+            }
+
+            if(prj.novel.GetSynopsis() != "")
+            { txtBoxSynopsis.Text = prj.novel.GetSynopsis(); }
         }
 
         private void BtnSaveNvlProp_Click(object sender, EventArgs e)
@@ -46,7 +63,12 @@ namespace WritingToolForm.NewForms
 
             foreach(object item in lbGenres.SelectedItems)
             {
-                novel.SetGenre(item.ToString());
+                novel.SetGenre(item.ToString());                
+            }
+
+            foreach(object item in lbGenres.SelectedIndices)
+            {
+                novel.SetGenreIndex(Convert.ToInt16(item));
             }
         }
 

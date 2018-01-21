@@ -13,6 +13,7 @@ namespace WritingToolForm
         private string title = "";
         private string author = "";
         private List<string> genre = new List<string>();
+        private List<int> genreIndexes = new List<int>();
         private string synopsis = "";
         #endregion
 
@@ -37,6 +38,10 @@ namespace WritingToolForm
         public List<string> GetGenres() { return genre; }
         public void SetGenres(List<string> values) { genre.AddRange(values); }
         public void SetGenre(string value) { genre.Add(value); }
+
+        public List<int> GetGenreIndexes() { return genreIndexes; }
+        public void SetGenreIndex(int value) { genreIndexes.Add(value); }
+        public void SetGenreIndexes(List<int> values) { genreIndexes.AddRange(values); }
         #endregion
 
         #region Synopsis
