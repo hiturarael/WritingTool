@@ -33,6 +33,12 @@ namespace WritingToolForm
             NewForms.ProjectForm newForm = new NewForms.ProjectForm(newProject);
 
             newForm.ShowDialog();
+
+            WriteProjectLoadDisplay();
+
+            ProjectMenu.ProjectMenu menu = new ProjectMenu.ProjectMenu(newProject);
+            menu.ShowDialog();
+
         }
 
         private void WriteProjectLoadDisplay()

@@ -9,12 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WritingToolForm.ProjectMenu
-{
+{    
     public partial class ProjectMenu : Form
     {
-        public ProjectMenu()
+        public Project project;
+
+        public ProjectMenu(Project prj)
         {
             InitializeComponent();
+
+            project = prj;
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -54,7 +58,7 @@ namespace WritingToolForm.ProjectMenu
 
         private void BtnPrjStatus_Click(object sender, EventArgs e)
         {
-            ProjectStats.ProjectStats statForm = new ProjectStats.ProjectStats();
+            ProjectStats.ProjectStats statForm = new ProjectStats.ProjectStats(project);
             statForm.ShowDialog();
         }
     }
