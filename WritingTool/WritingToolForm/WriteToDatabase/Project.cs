@@ -155,43 +155,50 @@ namespace WritingToolForm
             string title = prj.novel.GetTitle();
             string author = prj.novel.GetAuthor();
 
-            XmlWriter writer = XmlWriter.Create(file);
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                Indent = true
+            };
 
-            writer.WriteStartDocument();
+            using (XmlWriter writer = XmlWriter.Create(file, settings))
+            {
 
-            #region Cover Page
-            writer.WriteStartElement("cover");
+                writer.WriteStartDocument();
 
-            writer.WriteElementString("Title", title);
-            writer.WriteElementString("Author", author);
+                #region Cover Page
+                writer.WriteStartElement("cover");
+                writer.WriteElementString("Title", title);
+                writer.WriteElementString("Author", author);
 
-            writer.WriteEndElement();
-            #endregion
+                writer.WriteEndElement();
+                #endregion
 
-            //#region Genres
-            //writer.WriteStartElement("genres");
+                //#region Genres
+                //writer.WriteStartElement("genres");
 
-            //foreach(string genre in prj.novel.GetGenres())
-            //{
-            //    writer.WriteStartElement("genre");
-            //    writer.WriteString(genre);
-            //    writer.WriteEndElement();
-            //}
+                //foreach(string genre in prj.novel.GetGenres())
+                //{
+                //    writer.WriteStartElement("genre");
+                //    writer.WriteString(genre);
+                //    writer.WriteEndElement();
+                //}
 
-            //writer.WriteEndElement();
-            //#endregion
+                //writer.WriteEndElement();
+                //#endregion
 
-            //#region Synopsis
-            //writer.WriteStartElement("synopsi");
+                //#region Synopsis
+                //writer.WriteStartElement("synopsi");
 
-            //writer.WriteStartElement("synopsis");
-            //writer.WriteString(prj.novel.GetSynopsis());
-            //writer.WriteEndElement();
+                //writer.WriteStartElement("synopsis");
+                //writer.WriteString(prj.novel.GetSynopsis());
+                //writer.WriteEndElement();
 
-            //writer.WriteEndElement();
-            //#endregion
+                //writer.WriteEndElement();
+                //#endregion
 
-            writer.WriteEndDocument();
+                writer.WriteEndDocument();
+            }
+            
 
             
         }
