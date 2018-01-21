@@ -152,8 +152,6 @@ namespace WritingToolForm
         static void NewProperty(Project prj)
         {
             string file = prj.GetFilepath() + "\\" + prj.novel.GetTitle() + ".xml";
-            string title = prj.novel.GetTitle();
-            string author = prj.novel.GetAuthor();
 
             XmlWriterSettings settings = new XmlWriterSettings
             {
@@ -168,8 +166,8 @@ namespace WritingToolForm
 
                 #region Cover Page
                 writer.WriteStartElement("cover");
-                writer.WriteElementString("Title", title);
-                writer.WriteElementString("Author", author);
+                writer.WriteElementString("Title", prj.novel.GetTitle());
+                writer.WriteElementString("Author", prj.novel.GetAuthor());
                 writer.WriteEndElement();
                 #endregion
 
@@ -196,12 +194,19 @@ namespace WritingToolForm
                 writer.WriteEndElement();
                 #endregion
 
+                #region filepaths
+                writer.WriteStartElement("Filepaths");
+                writer.WriteElementString("Artifacts", prj.GetArtifactFilepath());
+                writer.WriteElementString("Chapters", prj.GetChapterFilepath());
+                writer.WriteElementString("Characters", prj.GetCharacterFilepath());
+                writer.WriteElementString("Creatures", prj.GetCreatureFilepath());
+                writer.WriteElementString("Locations", prj.GetCreatureFilepath());
+                writer.WriteEndElement();
+                #endregion
+
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
-            }
-            
-
-            
+            }  
         }
     }
 }

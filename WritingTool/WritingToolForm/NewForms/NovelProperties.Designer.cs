@@ -85,6 +85,7 @@
             this.btnCancelNvlProp.TabIndex = 5;
             this.btnCancelNvlProp.Text = "Cancel";
             this.btnCancelNvlProp.UseVisualStyleBackColor = true;
+            this.btnCancelNvlProp.Click += new System.EventHandler(this.BtnCancelNvlProp_Click);
             // 
             // lbGenres
             // 
@@ -165,7 +166,7 @@
             this.txtBoxSynopsis.TabIndex = 10;
             this.txtBoxSynopsis.Text = "";
             // 
-            // NewNovel
+            // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +181,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNvlTitle);
-            this.Name = "NewNovel";
+            this.Name = "ProjectForm";
             this.Text = "Create New Novel";
             this.ResumeLayout(false);
             this.PerformLayout();
