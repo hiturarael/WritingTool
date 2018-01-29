@@ -13,6 +13,7 @@ namespace WritingToolForm.NewForms
     public partial class ProjectForm : Form
     {
         private Project project;
+        private bool isNewProject = true;
 
         public ProjectForm()
         {
@@ -23,6 +24,9 @@ namespace WritingToolForm.NewForms
         {
             InitializeComponent();
             project = prj;
+
+            if(prj.GetTitle() != "")
+            { isNewProject = false; }
 
             if (prj.novel.GetTitle() != "")
             { txtNvlTitle.Text = prj.novel.GetTitle(); }
@@ -44,15 +48,16 @@ namespace WritingToolForm.NewForms
 
         private void BtnSaveNvlProp_Click(object sender, EventArgs e)
         {
+
             if (IsFormValid())
             {
                 SetPrjData(project.novel);
 
-                Project.SaveProject(project, true);
+                Project.SaveProject(project, isNewProject);
 
                 //close this open the project menu
                 Close();
-            } 
+            }
         }
 
         private void SetPrjData(Novel novel)

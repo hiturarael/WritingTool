@@ -51,5 +51,22 @@ namespace WritingToolForm
 
             listBoxPrjs.DataSource = loadContents;
         }
+
+        private void BtnLoadPrj_Click(object sender, EventArgs e)
+        {
+            //declare variables
+            string projectName;
+            string filepath = "";
+            Project prj = new Project();
+
+            //get selected project name
+            projectName = listBoxPrjs.SelectedItem.ToString();
+
+            //navigate to the filepath
+            filepath += "C:\\Novellis\\" + projectName;
+
+            //fill project data
+            Project.GetCoverXML(filepath, prj);
+        }
     }
 }

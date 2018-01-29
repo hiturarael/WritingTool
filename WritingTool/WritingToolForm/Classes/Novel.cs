@@ -9,7 +9,6 @@ namespace WritingToolForm
     public class Novel
     {
         #region Properties
-        private bool isANewProject = true;
         private string title = "";
         private string author = "";
         private List<string> genre = new List<string>();
@@ -18,12 +17,6 @@ namespace WritingToolForm
         #endregion
 
         #region Functions
-
-        #region New Project
-        public bool GetProjectNew() { return isANewProject; }
-        public void SetProjectNew(bool value) { isANewProject = value; }
-        #endregion
-
         #region Title
         public string GetTitle() { return title; }
         public void SetTitle(string value) { title = value; }

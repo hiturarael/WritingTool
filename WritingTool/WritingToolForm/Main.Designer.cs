@@ -31,11 +31,11 @@
             this.grpBoxLoadPrj = new System.Windows.Forms.GroupBox();
             this.listBoxPrjs = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDelProj = new System.Windows.Forms.Button();
             this.btnStats = new System.Windows.Forms.Button();
             this.brnLoadPrj = new System.Windows.Forms.Button();
             this.btnNewPrj = new System.Windows.Forms.Button();
             this.lblVrsnNum = new System.Windows.Forms.Label();
-            this.btnDelProj = new System.Windows.Forms.Button();
             this.grpBoxLoadPrj.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,15 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // btnDelProj
+            // 
+            this.btnDelProj.Location = new System.Drawing.Point(71, 118);
+            this.btnDelProj.Name = "btnDelProj";
+            this.btnDelProj.Size = new System.Drawing.Size(100, 23);
+            this.btnDelProj.TabIndex = 3;
+            this.btnDelProj.Text = "Delete Project";
+            this.btnDelProj.UseVisualStyleBackColor = true;
+            // 
             // btnStats
             // 
             this.btnStats.Location = new System.Drawing.Point(71, 167);
@@ -81,11 +90,12 @@
             // brnLoadPrj
             // 
             this.brnLoadPrj.Location = new System.Drawing.Point(71, 68);
-            this.brnLoadPrj.Name = "brnLoadPrj";
+            this.brnLoadPrj.Name = "btnLoadPrj";
             this.brnLoadPrj.Size = new System.Drawing.Size(100, 23);
             this.brnLoadPrj.TabIndex = 1;
             this.brnLoadPrj.Text = "Load Project";
             this.brnLoadPrj.UseVisualStyleBackColor = true;
+            this.brnLoadPrj.Click += new System.EventHandler(this.BtnLoadPrj_Click);
             // 
             // btnNewPrj
             // 
@@ -105,15 +115,6 @@
             this.lblVrsnNum.Size = new System.Drawing.Size(88, 13);
             this.lblVrsnNum.TabIndex = 2;
             this.lblVrsnNum.Text = "Version Number: ";
-            // 
-            // btnDelProj
-            // 
-            this.btnDelProj.Location = new System.Drawing.Point(71, 118);
-            this.btnDelProj.Name = "btnDelProj";
-            this.btnDelProj.Size = new System.Drawing.Size(100, 23);
-            this.btnDelProj.TabIndex = 3;
-            this.btnDelProj.Text = "Delete Project";
-            this.btnDelProj.UseVisualStyleBackColor = true;
             // 
             // Main
             // 

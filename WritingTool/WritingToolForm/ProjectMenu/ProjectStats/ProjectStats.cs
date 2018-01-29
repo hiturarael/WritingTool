@@ -22,22 +22,8 @@ namespace WritingToolForm.ProjectMenu.ProjectStats
 
         private void ProjectStats_Load(object sender, EventArgs e)
         {
-            int genreCount = project.novel.GetGenres().Count();
-            int curGenre = 0;
-            string genres = "";
-
-            foreach(string genre in project.novel.GetGenres())
-            {
-                genres += genre;
-
-                if(curGenre < genreCount)
-                { genres += ", "; }
-            }
-
-            lblAuthor.Text = project.novel.GetAuthor();
-            lblTitle.Text = project.novel.GetTitle();
-            lblGenres.Text = genres;
-            rtbSynopsis.Text = project.novel.GetSynopsis();
+            SetCover();
+            //set the counts
         }
 
         private void BtnEditCover_Click(object sender, EventArgs e)
@@ -45,6 +31,28 @@ namespace WritingToolForm.ProjectMenu.ProjectStats
             NewForms.ProjectForm form = new NewForms.ProjectForm(project);
 
             form.ShowDialog();
+
+            SetCover();
+        }
+
+        private void SetCover()
+        {
+            int genreCount = project.novel.GetGenres().Count();
+            int curGenre = 0;
+            string genres = "";
+
+            foreach (string genre in project.novel.GetGenres())
+            {
+                genres += genre;
+
+                if (curGenre < genreCount)
+                { genres += ", "; }
+            }
+
+            lblAuthor.Text = project.novel.GetAuthor();
+            lblTitle.Text = project.novel.GetTitle();
+            lblGenres.Text = genres;
+            rtbSynopsis.Text = project.novel.GetSynopsis();
         }
     }
 }
