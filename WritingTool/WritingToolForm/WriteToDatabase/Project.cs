@@ -86,7 +86,7 @@ namespace WritingToolForm
             }
         }
 
-        static void NewDirectory(Project prj)
+        private static void NewDirectory(Project prj)
         {
             try
             {
@@ -159,7 +159,7 @@ namespace WritingToolForm
             }
         }
 
-        static void NewProperty(Project prj)
+        private static void NewProperty(Project prj)
         {
             string file = prj.GetFilepath() + "\\Cover.xml";
 
@@ -220,7 +220,7 @@ namespace WritingToolForm
             }
         }
 
-        static void UpdateProperty(Project prj)
+        private static void UpdateProperty(Project prj)
         {
             string file = prj.GetFilepath() + "\\" + prj.GetTitle() + ".xml";
 
@@ -340,6 +340,27 @@ namespace WritingToolForm
                     break;
             }
 
+        }
+
+        public static void IterateThroughAllNodes(XmlDocument doc, Action<XmlNode> elementVisitor)
+        {
+            if(doc != null && elementVisitor != null)
+            {
+                foreach(XmlNode node in doc.ChildNodes)
+                {
+                    doIterateNode(node, elementVisitor);
+                }
+            }
+        }
+
+        private static void doIterateNode(XmlNode node, Action<XmlNode>elementVisitor)
+        {
+            elementVisitor(node);
+
+            foreach(XmlNode childNode in node.ChildNodes)
+            {
+                doIterateNode(childNode, elementVisitor);
+            }
         }
     }
 }
