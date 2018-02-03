@@ -20,9 +20,22 @@ namespace WritingToolForm
         private string creatureFilepath = "";
         private string locationFilepath = "";
         private string raceFilepath = "";
-
+        
         public Novel novel;
 
+        public static readonly IList<string> tags = new List<string>()
+        {
+            "title",
+            "author",
+            "genreid",
+            "genretype",
+            "synopsis",
+            "artifacts",
+            "chapters",
+            "characters",
+            "locations"
+        };
+        
         #endregion
 
         #region Get/Set
@@ -165,7 +178,8 @@ namespace WritingToolForm
 
             XmlWriterSettings settings = new XmlWriterSettings
             {
-                Indent = true
+                Indent = true,
+                OmitXmlDeclaration = true
             };
 
             using (XmlWriter writer = XmlWriter.Create(file, settings))
@@ -263,7 +277,6 @@ namespace WritingToolForm
             };
 
             XmlDocument doc = new XmlDocument();
-            XmlNodeList nodes;
 
             //load the file
             try
@@ -273,40 +286,24 @@ namespace WritingToolForm
             {
                 MessageBox.Show(ex.ToString());
             }
-            //get the node list
-            nodes = doc.GetElementsByTagName("Project");
 
-            //go through each node to find the necessary nodes
-            foreach (XmlNode node in nodes)
+            //loop through each node and check the tag name against what we're looking for. 
+            foreach (string tag in tags)
             {
-                foreach (XmlNode child in node.ChildNodes)
+                doc.IterateThroughAllNodes(delegate (XmlNode node)
                 {
-                    if(child.HasChildNodes)
+                    //if the tag name is what we're looking for, set our data.
+                    if(node.Name.ToLower() == tag)
                     {
-                        foreach(XmlNode _child in child)
-                        {
-                            if (_child.HasChildNodes)
-                            {
-                                foreach (XmlNode __child in child)
-                                {
-                                    SetCover(__child.InnerText, prj);
-                                }
-                            } else
-                            {
-                                SetCover(_child.InnerText, prj);
-                            }
-                        }
-                    } else
-                    {
-                        SetCover(child.InnerText, prj);
+                        SetCover(tag, node.InnerText, prj);
                     }
-                }
+                });
             }
         }
 
-        private static void SetCover(string nodeText, Project prj)
+        private static void SetCover(string node, string nodeText, Project prj)
         {
-            switch (nodeText)
+            switch (node)
             {
                 case "title":
                     prj.novel.SetTitle(nodeText);
@@ -342,25 +339,30 @@ namespace WritingToolForm
 
         }
 
-        public static void IterateThroughAllNodes(XmlDocument doc, Action<XmlNode> elementVisitor)
+    }
+
+    public static class XmlDocumentExtensions
+    {
+        public static void IterateThroughAllNodes(this XmlDocument doc, Action<XmlNode> elementVisitor)
         {
-            if(doc != null && elementVisitor != null)
+            if (doc != null && elementVisitor != null)
             {
-                foreach(XmlNode node in doc.ChildNodes)
+                foreach (XmlNode node in doc.ChildNodes)
                 {
-                    doIterateNode(node, elementVisitor);
+                    DoIterateNode(node, elementVisitor);
                 }
             }
         }
 
-        private static void doIterateNode(XmlNode node, Action<XmlNode>elementVisitor)
+        private static void DoIterateNode(XmlNode node, Action<XmlNode> elementVisitor)
         {
             elementVisitor(node);
 
-            foreach(XmlNode childNode in node.ChildNodes)
+            foreach (XmlNode childNode in node.ChildNodes)
             {
-                doIterateNode(childNode, elementVisitor);
+                DoIterateNode(childNode, elementVisitor);
             }
         }
+
     }
 }
