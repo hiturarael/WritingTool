@@ -88,15 +88,16 @@ namespace WritingToolForm
 
         public static void SaveProject(Project prj, bool isNewProject)
         {
-            if (isNewProject)
+            if(!isNewProject)
             {
-                prj.SetTitle(prj.novel.GetTitle());
-                NewDirectory(prj);
-                NewProperty(prj);
-            } else
-            {
-                UpdateProperty(prj);
+                string filepath = prj.GetFilepath() + "\\Cover.xml";
+
+                File.Delete(filepath);
             }
+
+            prj.SetTitle(prj.novel.GetTitle());
+            NewDirectory(prj);
+            NewProperty(prj);
         }
 
         private static void NewDirectory(Project prj)
@@ -201,8 +202,8 @@ namespace WritingToolForm
                 for (int x = 0; x < prj.novel.GetGenres().Count(); x++)
                 {
                     writer.WriteStartElement("genre");
-                    writer.WriteElementString("genreid", prj.novel.GetGenres()[x]);
-                    writer.WriteElementString("genretype", prj.novel.GetGenreIndexes()[x].ToString());
+                    writer.WriteElementString("genreid", prj.novel.GetGenreIndexes()[x].ToString());
+                    writer.WriteElementString("genretype", prj.novel.GetGenres()[x]);
                     writer.WriteEndElement();
                 }
                 writer.WriteEndElement();
@@ -234,38 +235,6 @@ namespace WritingToolForm
             }
         }
 
-        private static void UpdateProperty(Project prj)
-        {
-            string file = prj.GetFilepath() + "\\" + prj.GetTitle() + ".xml";
-
-            XmlWriterSettings settings = new XmlWriterSettings
-            {
-                Indent = true
-            };
-
-            XmlDocument doc = new XmlDocument();
-            XmlNodeList nodes;
-
-            //load the file
-            doc.Load(file);
-
-            //get the node list
-            nodes = doc.GetElementsByTagName("Project");
-
-            //go through each node to find the necessary nodes
-            foreach(XmlNode node in nodes)
-            {
-                XmlNodeList childNodes = node.ChildNodes;
-
-                foreach (XmlNode child in childNodes)
-                {
-                    if(child.Name == "cover")
-                    {
-                        
-                    }
-                }
-            }
-        }
 
         public static void GetCoverXML(string filepath, Project prj)
         {
