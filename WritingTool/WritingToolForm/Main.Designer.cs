@@ -46,7 +46,7 @@
             this.grpBoxLoadPrj.Location = new System.Drawing.Point(312, 15);
             this.grpBoxLoadPrj.Name = "grpBoxLoadPrj";
             this.grpBoxLoadPrj.Size = new System.Drawing.Size(340, 358);
-            this.grpBoxLoadPrj.TabIndex = 0;
+            this.grpBoxLoadPrj.TabIndex = 1;
             this.grpBoxLoadPrj.TabStop = false;
             // 
             // listBoxPrjs
@@ -66,7 +66,7 @@
             this.groupBox2.Location = new System.Drawing.Point(15, 15);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(252, 241);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
             // btnDelProj
@@ -74,23 +74,24 @@
             this.btnDelProj.Location = new System.Drawing.Point(71, 118);
             this.btnDelProj.Name = "btnDelProj";
             this.btnDelProj.Size = new System.Drawing.Size(100, 23);
-            this.btnDelProj.TabIndex = 3;
+            this.btnDelProj.TabIndex = 2;
             this.btnDelProj.Text = "Delete Project";
             this.btnDelProj.UseVisualStyleBackColor = true;
+            this.btnDelProj.Click += new System.EventHandler(this.BtnDelProj_Click);
             // 
             // btnStats
             // 
             this.btnStats.Location = new System.Drawing.Point(71, 167);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(100, 23);
-            this.btnStats.TabIndex = 2;
+            this.btnStats.TabIndex = 3;
             this.btnStats.Text = "Statistics";
             this.btnStats.UseVisualStyleBackColor = true;
             // 
             // brnLoadPrj
             // 
             this.brnLoadPrj.Location = new System.Drawing.Point(71, 68);
-            this.brnLoadPrj.Name = "btnLoadPrj";
+            this.brnLoadPrj.Name = "brnLoadPrj";
             this.brnLoadPrj.Size = new System.Drawing.Size(100, 23);
             this.brnLoadPrj.TabIndex = 1;
             this.brnLoadPrj.Text = "Load Project";
@@ -125,7 +126,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpBoxLoadPrj);
             this.Name = "Main";
-            this.Text = "Novel Writer";
+            this.Text = "Novelis";
             this.Load += new System.EventHandler(this.Main_Load);
             this.grpBoxLoadPrj.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

@@ -39,6 +39,7 @@ namespace WritingToolForm
             ProjectMenu.ProjectMenu menu = new ProjectMenu.ProjectMenu(newProject);
             menu.ShowDialog();
 
+            WriteProjectLoadDisplay();
         }
 
         private void WriteProjectLoadDisplay()
@@ -63,10 +64,20 @@ namespace WritingToolForm
             projectName = listBoxPrjs.SelectedItem.ToString();
 
             //navigate to the filepath
-            filepath += "C:\\Novellis\\" + projectName;
+            filepath = "C:\\Novellis\\" + projectName;
 
             //fill project data
             Project.GetCoverXML(filepath, prj);
+
+            WriteProjectLoadDisplay();
+        }
+
+        private void BtnDelProj_Click(object sender, EventArgs e)
+        {
+            string projectName;
+            projectName = listBoxPrjs.SelectedItem.ToString();
+
+            Project.DeleteProject(projectName);
         }
     }
 }

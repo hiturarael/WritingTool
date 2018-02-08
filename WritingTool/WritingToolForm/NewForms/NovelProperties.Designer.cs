@@ -54,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(118, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 26);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Title";
             // 
             // label2
@@ -64,7 +64,7 @@
             this.label2.Location = new System.Drawing.Point(98, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 26);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 8;
             this.label2.Text = "Genre";
             // 
             // btnSaveNvlProp
@@ -128,7 +128,7 @@
             this.lbGenres.Name = "lbGenres";
             this.lbGenres.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbGenres.Size = new System.Drawing.Size(402, 69);
-            this.lbGenres.TabIndex = 6;
+            this.lbGenres.TabIndex = 2;
             // 
             // label3
             // 
@@ -137,7 +137,7 @@
             this.label3.Location = new System.Drawing.Point(94, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 26);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 7;
             this.label3.Text = "Author";
             // 
             // txtNvlAuthor
@@ -145,7 +145,7 @@
             this.txtNvlAuthor.Location = new System.Drawing.Point(190, 91);
             this.txtNvlAuthor.Name = "txtNvlAuthor";
             this.txtNvlAuthor.Size = new System.Drawing.Size(402, 20);
-            this.txtNvlAuthor.TabIndex = 7;
+            this.txtNvlAuthor.TabIndex = 1;
             // 
             // label4
             // 
@@ -163,7 +163,7 @@
             this.txtBoxSynopsis.Location = new System.Drawing.Point(192, 235);
             this.txtBoxSynopsis.Name = "txtBoxSynopsis";
             this.txtBoxSynopsis.Size = new System.Drawing.Size(399, 191);
-            this.txtBoxSynopsis.TabIndex = 10;
+            this.txtBoxSynopsis.TabIndex = 3;
             this.txtBoxSynopsis.Text = "";
             // 
             // ProjectForm

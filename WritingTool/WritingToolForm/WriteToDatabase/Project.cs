@@ -13,7 +13,7 @@ namespace WritingToolForm
     {
         #region Properties
         private string prjTitle = "";
-        private string prjFilepath = "C:\\Novellis\\";
+        private string prjFilepath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\";
         private string chapterFilepath = "";
         private string artifactFilepath = "";
         private string characterFilepath = "";
@@ -98,6 +98,32 @@ namespace WritingToolForm
             prj.SetTitle(prj.novel.GetTitle());
             NewDirectory(prj);
             NewProperty(prj);
+        }
+
+        public static void DeleteProject(string projectName)
+        {
+            string filepath = "C:\\Novellis\\" + projectName;
+            string message = "You will not be able to recover a project after deleting. Do you REALLY want to delete this project?";
+            DialogResult result = MessageBox.Show(message, "Delete Project", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                string[] files = Directory.GetFiles(filepath);
+                string[] directories = Directory.GetDirectories(filepath);
+
+                foreach(string file in files)
+                {
+                    File.SetAttributes(file, FileAttributes.Normal);
+                    File.Delete(file);
+                }
+
+                foreach(string directory in directories)
+                {
+                    Directory.Delete(directory);
+                }
+
+                Directory.Delete(filepath);
+            }
         }
 
         private static void NewDirectory(Project prj)
@@ -234,7 +260,6 @@ namespace WritingToolForm
                 writer.WriteEndDocument();
             }
         }
-
 
         public static void GetCoverXML(string filepath, Project prj)
         {
