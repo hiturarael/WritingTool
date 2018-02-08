@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.NewForms
+namespace Novelis.NewForms
 {
     public partial class ProjectForm : Form
     {
@@ -20,13 +20,12 @@ namespace WritingToolForm.NewForms
             InitializeComponent();
         }
 
-        public ProjectForm(Project prj)
+        public ProjectForm(Project prj, bool isNewPrj)
         {
             InitializeComponent();
-            project = prj;
 
-            if(prj.GetTitle() != "")
-            { isNewProject = false; }
+            project = prj;
+            isNewProject = isNewPrj;
 
             if (prj.novel.GetTitle() != "")
             { txtNvlTitle.Text = prj.novel.GetTitle(); }
@@ -68,12 +67,18 @@ namespace WritingToolForm.NewForms
 
             foreach(object item in lbGenres.SelectedItems)
             {
-                novel.SetGenre(item.ToString());                
+                if (!novel.GetGenres().Contains(item))
+                {
+                    novel.SetGenre(item.ToString());
+                }
             }
 
             foreach(object item in lbGenres.SelectedIndices)
             {
-                novel.SetGenreIndex(Convert.ToInt16(item));
+                if (!novel.GetGenreIndexes().Contains(Convert.ToInt32(item)))
+                {
+                    novel.SetGenreIndex(Convert.ToInt16(item));
+                }
             }
         }
 

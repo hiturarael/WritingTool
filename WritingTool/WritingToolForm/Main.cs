@@ -9,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm
+namespace Novelis
 {
     public partial class Main : Form
     {
+
         public Main()
         {
             InitializeComponent();
@@ -27,10 +28,9 @@ namespace WritingToolForm
 
         private void BtnNewPrj_Click(object sender, EventArgs e)
         {
-
             Project newProject = new Project();
 
-            NewForms.ProjectForm newForm = new NewForms.ProjectForm(newProject);
+            NewForms.ProjectForm newForm = new NewForms.ProjectForm(newProject, true);
 
             newForm.ShowDialog();
 
@@ -44,13 +44,16 @@ namespace WritingToolForm
 
         private void WriteProjectLoadDisplay()
         {
-            string filepath = "C:\\Novellis";
+            string filepath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Novelis";
             List<string> loadContents = new List<string>();
 
-            foreach(string directory in Directory.GetDirectories(filepath))
-            { loadContents.Add(directory.Replace(filepath+"\\", "")); }
+            if (Directory.Exists(filepath))
+            {
+                foreach (string directory in Directory.GetDirectories(filepath))
+                { loadContents.Add(directory.Replace(filepath + "\\", "")); }
 
-            listBoxPrjs.DataSource = loadContents;
+                listBoxPrjs.DataSource = loadContents;
+            }
         }
 
         private void BtnLoadPrj_Click(object sender, EventArgs e)
@@ -64,12 +67,14 @@ namespace WritingToolForm
             projectName = listBoxPrjs.SelectedItem.ToString();
 
             //navigate to the filepath
-            filepath = "C:\\Novellis\\" + projectName;
+            filepath = Novelis.Filepath + projectName;
 
             //fill project data
+            prj.SetTitle(projectName);
             Project.GetCoverXML(filepath, prj);
 
-            WriteProjectLoadDisplay();
+            ProjectMenu.ProjectMenu menu = new ProjectMenu.ProjectMenu(prj);
+            menu.ShowDialog();
         }
 
         private void BtnDelProj_Click(object sender, EventArgs e)

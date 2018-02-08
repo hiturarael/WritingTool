@@ -7,13 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace WritingToolForm
+namespace Novelis
 {
     public class Project
     {
         #region Properties
         private string prjTitle = "";
-        private string prjFilepath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\";
+        private string prjFilepath = Novelis.Filepath;
         private string chapterFilepath = "";
         private string artifactFilepath = "";
         private string characterFilepath = "";
@@ -90,19 +90,21 @@ namespace WritingToolForm
         {
             if(!isNewProject)
             {
-                string filepath = prj.GetFilepath() + "\\Cover.xml";
+                string filepath = prj.GetFilepath() + prj.GetTitle() + "\\Cover.xml";
 
                 File.Delete(filepath);
+            } else
+            {
+                prj.SetTitle(prj.novel.GetTitle());
+                NewDirectory(prj);
             }
 
-            prj.SetTitle(prj.novel.GetTitle());
-            NewDirectory(prj);
-            NewProperty(prj);
+            NewCover(prj);
         }
 
         public static void DeleteProject(string projectName)
         {
-            string filepath = "C:\\Novellis\\" + projectName;
+            string filepath = Novelis.Filepath + projectName;
             string message = "You will not be able to recover a project after deleting. Do you REALLY want to delete this project?";
             DialogResult result = MessageBox.Show(message, "Delete Project", MessageBoxButtons.YesNo);
 
@@ -133,14 +135,14 @@ namespace WritingToolForm
                 bool saveIsComplete = false;
                 int prjNum = 0;
                 string newFilepath;
-                if (Directory.Exists(prj.GetFilepath() + prj.novel.GetTitle()))
+                if (Directory.Exists(prj.GetFilepath() + prj.GetTitle()))
                 {
                     //message box that project with the name exists
                     //confirm if the user wants to save
                     //if so add a (#) and check again.
                     while (!saveIsComplete)
                     {
-                        newFilepath = prj.GetFilepath() + prj.novel.GetTitle() + "(" + prjNum + ")";
+                        newFilepath = prj.GetFilepath() + prj.GetTitle() + "(" + prjNum + ")";
 
                         if (!Directory.Exists(newFilepath))
                         {
@@ -167,6 +169,9 @@ namespace WritingToolForm
                                 prj.SetRaceFilepath(newFilepath + "\\Races");
 
                                 saveIsComplete = true;
+                            } else
+                            {
+                                break;
                             }
                         }
                         prjNum++;
@@ -199,9 +204,9 @@ namespace WritingToolForm
             }
         }
 
-        private static void NewProperty(Project prj)
+        private static void NewCover(Project prj)
         {
-            string file = prj.GetFilepath() + "\\Cover.xml";
+            string file = prj.GetFilepath() + prj.GetTitle() + "\\Cover.xml";
 
             XmlWriterSettings settings = new XmlWriterSettings
             {
@@ -309,6 +314,7 @@ namespace WritingToolForm
                     prj.novel.SetSynopsis(nodeText);
                     break;
                 case "genrename":
+                case "genretype":
                     prj.novel.SetGenre(nodeText);
                     break;
                 case "genreid":

@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.ProjectMenu.ProjectStats
+﻿namespace Novelis.ProjectMenu.ProjectStats
 {
     partial class ProjectStats
     {

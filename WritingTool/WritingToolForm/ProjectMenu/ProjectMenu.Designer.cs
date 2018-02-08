@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.ProjectMenu
+﻿namespace Novelis.ProjectMenu
 {
     partial class ProjectMenu
     {

@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.ProjectMenu.ArtifactManagement
+﻿namespace Novelis.ProjectMenu.ArtifactManagement
 {
     partial class ArtifactManagement
     {

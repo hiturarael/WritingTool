@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.ProjectMenu
+namespace Novelis.ProjectMenu
 {    
     public partial class ProjectMenu : Form
     {

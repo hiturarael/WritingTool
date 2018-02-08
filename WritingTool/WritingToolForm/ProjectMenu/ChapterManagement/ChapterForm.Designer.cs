@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.ProjectMenu.ChapterManagement
+﻿namespace Novelis.ProjectMenu.ChapterManagement
 {
     partial class ChapterForm
     {

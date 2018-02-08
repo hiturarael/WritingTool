@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.ProjectMenu.CreatureManagement
+namespace Novelis.ProjectMenu.CreatureManagement
 {
     public partial class CreatureManagement : Form
     {

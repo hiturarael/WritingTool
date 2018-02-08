@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.ProjectMenu.ProjectStats
+namespace Novelis.ProjectMenu.ProjectStats
 {
     public partial class ProjectStats : Form
     {
@@ -22,15 +22,18 @@ namespace WritingToolForm.ProjectMenu.ProjectStats
 
         private void ProjectStats_Load(object sender, EventArgs e)
         {
+            ClearCover();
             SetCover();
             //set the counts
         }
 
         private void BtnEditCover_Click(object sender, EventArgs e)
         {
-            NewForms.ProjectForm form = new NewForms.ProjectForm(project);
+            NewForms.ProjectForm form = new NewForms.ProjectForm(project, false);
 
             form.ShowDialog();
+
+            ClearCover();
 
             SetCover();
         }
@@ -44,7 +47,7 @@ namespace WritingToolForm.ProjectMenu.ProjectStats
             foreach (string genre in project.novel.GetGenres())
             {
                 genres += genre;
-
+                curGenre++;
                 if (curGenre < genreCount)
                 { genres += ", "; }
             }
@@ -53,6 +56,14 @@ namespace WritingToolForm.ProjectMenu.ProjectStats
             lblTitle.Text = project.novel.GetTitle();
             lblGenres.Text = genres;
             rtbSynopsis.Text = project.novel.GetSynopsis();
+        }
+
+        private void ClearCover()
+        {
+            lblAuthor.Text = "";
+            lblTitle.Text = "";
+            lblGenres.Text = "";
+            rtbSynopsis.Text = "";
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.ProjectMenu.LocationManagement
+﻿namespace Novelis.ProjectMenu.LocationManagement
 {
     partial class LocationManagement
     {

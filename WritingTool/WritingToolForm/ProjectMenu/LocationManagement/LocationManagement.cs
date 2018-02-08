@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.ProjectMenu.LocationManagement
+namespace Novelis.ProjectMenu.LocationManagement
 {
     public partial class LocationManagement : Form
     {

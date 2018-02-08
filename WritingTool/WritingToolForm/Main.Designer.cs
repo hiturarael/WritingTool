@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm
+﻿namespace Novelis
 {
     partial class Main
     {
