@@ -79,6 +79,7 @@
             this.btnAddChapter.TabIndex = 10;
             this.btnAddChapter.Text = "Add New Chapter";
             this.btnAddChapter.UseVisualStyleBackColor = true;
+            this.btnAddChapter.Click += new System.EventHandler(this.BtnAddChapter_Click);
             // 
             // ChapterForm
             // 

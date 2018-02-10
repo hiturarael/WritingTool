@@ -21,5 +21,12 @@ namespace Novelis.ProjectMenu.ChapterManagement
         {
             Close();
         }
+
+        private void BtnAddChapter_Click(object sender, EventArgs e)
+        {
+            NewForms.Chapter newChapter = new NewForms.Chapter();
+
+            newChapter.ShowDialog();
+        }
     }
 }
