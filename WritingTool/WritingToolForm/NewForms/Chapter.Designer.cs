@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.NewForms
+﻿namespace Novelis.NewForms
 {
     partial class Chapter
     {

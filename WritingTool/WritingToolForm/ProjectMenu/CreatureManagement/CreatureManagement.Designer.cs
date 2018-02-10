@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.ProjectMenu.CreatureManagement
+﻿namespace Novelis.ProjectMenu.CreatureManagement
 {
     partial class CreatureManagement
     {

@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.ProjectMenu.RaceManagement
+﻿namespace Novelis.ProjectMenu.RaceManagement
 {
     partial class RaceManagement
     {

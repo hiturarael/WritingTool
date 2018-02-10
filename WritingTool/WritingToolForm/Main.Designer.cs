@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm
+﻿namespace Novelis
 {
     partial class Main
     {
@@ -31,11 +31,11 @@
             this.grpBoxLoadPrj = new System.Windows.Forms.GroupBox();
             this.listBoxPrjs = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDelProj = new System.Windows.Forms.Button();
             this.btnStats = new System.Windows.Forms.Button();
             this.brnLoadPrj = new System.Windows.Forms.Button();
             this.btnNewPrj = new System.Windows.Forms.Button();
             this.lblVrsnNum = new System.Windows.Forms.Label();
-            this.btnDelProj = new System.Windows.Forms.Button();
             this.grpBoxLoadPrj.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +46,7 @@
             this.grpBoxLoadPrj.Location = new System.Drawing.Point(312, 15);
             this.grpBoxLoadPrj.Name = "grpBoxLoadPrj";
             this.grpBoxLoadPrj.Size = new System.Drawing.Size(340, 358);
-            this.grpBoxLoadPrj.TabIndex = 0;
+            this.grpBoxLoadPrj.TabIndex = 1;
             this.grpBoxLoadPrj.TabStop = false;
             // 
             // listBoxPrjs
@@ -66,15 +66,25 @@
             this.groupBox2.Location = new System.Drawing.Point(15, 15);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(252, 241);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
+            // 
+            // btnDelProj
+            // 
+            this.btnDelProj.Location = new System.Drawing.Point(71, 118);
+            this.btnDelProj.Name = "btnDelProj";
+            this.btnDelProj.Size = new System.Drawing.Size(100, 23);
+            this.btnDelProj.TabIndex = 2;
+            this.btnDelProj.Text = "Delete Project";
+            this.btnDelProj.UseVisualStyleBackColor = true;
+            this.btnDelProj.Click += new System.EventHandler(this.BtnDelProj_Click);
             // 
             // btnStats
             // 
             this.btnStats.Location = new System.Drawing.Point(71, 167);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(100, 23);
-            this.btnStats.TabIndex = 2;
+            this.btnStats.TabIndex = 3;
             this.btnStats.Text = "Statistics";
             this.btnStats.UseVisualStyleBackColor = true;
             // 
@@ -86,6 +96,7 @@
             this.brnLoadPrj.TabIndex = 1;
             this.brnLoadPrj.Text = "Load Project";
             this.brnLoadPrj.UseVisualStyleBackColor = true;
+            this.brnLoadPrj.Click += new System.EventHandler(this.BtnLoadPrj_Click);
             // 
             // btnNewPrj
             // 
@@ -106,15 +117,6 @@
             this.lblVrsnNum.TabIndex = 2;
             this.lblVrsnNum.Text = "Version Number: ";
             // 
-            // btnDelProj
-            // 
-            this.btnDelProj.Location = new System.Drawing.Point(71, 118);
-            this.btnDelProj.Name = "btnDelProj";
-            this.btnDelProj.Size = new System.Drawing.Size(100, 23);
-            this.btnDelProj.TabIndex = 3;
-            this.btnDelProj.Text = "Delete Project";
-            this.btnDelProj.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,7 +126,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpBoxLoadPrj);
             this.Name = "Main";
-            this.Text = "Novel Writer";
+            this.Text = "Novelis";
             this.Load += new System.EventHandler(this.Main_Load);
             this.grpBoxLoadPrj.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

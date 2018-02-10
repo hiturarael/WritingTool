@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.NewForms
+namespace Novelis.NewForms
 {
     public partial class Chapter : Form
     {

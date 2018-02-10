@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.ProjectMenu.CharacterManagement
+namespace Novelis.ProjectMenu.CharacterManagement
 {
     public partial class CharacterForm : Form
     {

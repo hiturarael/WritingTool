@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WritingToolForm.ProjectMenu.ArtifactManagement
+namespace Novelis.ProjectMenu.ArtifactManagement
 {
     public partial class ArtifactManagement : Form
     {

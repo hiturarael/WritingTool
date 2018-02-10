@@ -1,6 +1,6 @@
-﻿namespace WritingToolForm
+﻿namespace Novelis.NewForms
 {
-    partial class NewNovel
+    partial class ProjectForm
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(118, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 26);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Title";
             // 
             // label2
@@ -64,7 +64,7 @@
             this.label2.Location = new System.Drawing.Point(98, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 26);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 8;
             this.label2.Text = "Genre";
             // 
             // btnSaveNvlProp
@@ -75,6 +75,7 @@
             this.btnSaveNvlProp.TabIndex = 4;
             this.btnSaveNvlProp.Text = "Save";
             this.btnSaveNvlProp.UseVisualStyleBackColor = true;
+            this.btnSaveNvlProp.Click += new System.EventHandler(this.BtnSaveNvlProp_Click);
             // 
             // btnCancelNvlProp
             // 
@@ -84,14 +85,50 @@
             this.btnCancelNvlProp.TabIndex = 5;
             this.btnCancelNvlProp.Text = "Cancel";
             this.btnCancelNvlProp.UseVisualStyleBackColor = true;
+            this.btnCancelNvlProp.Click += new System.EventHandler(this.BtnCancelNvlProp_Click);
             // 
             // lbGenres
             // 
             this.lbGenres.FormattingEnabled = true;
+            this.lbGenres.Items.AddRange(new object[] {
+            "Fiction",
+            "Non Fiction",
+            "Science Fiction",
+            "Satire",
+            "Drama",
+            "Action and Adventure",
+            "Romance",
+            "Mystery",
+            "Horror",
+            "Self Help",
+            "Health",
+            "Guide",
+            "Travel",
+            "Children\'s",
+            "Religion, Spirituality, & New Age",
+            "Science",
+            "History",
+            "Math",
+            "Anthology",
+            "Poetry",
+            "Encyclopedia",
+            "Dictionary",
+            "Comic",
+            "Art",
+            "Cookbook",
+            "Diary",
+            "Journal",
+            "Prayer Book",
+            "Series",
+            "Trilogy",
+            "Biography",
+            "Autobiography",
+            "Fantasy"});
             this.lbGenres.Location = new System.Drawing.Point(190, 146);
             this.lbGenres.Name = "lbGenres";
+            this.lbGenres.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbGenres.Size = new System.Drawing.Size(402, 69);
-            this.lbGenres.TabIndex = 6;
+            this.lbGenres.TabIndex = 2;
             // 
             // label3
             // 
@@ -100,7 +137,7 @@
             this.label3.Location = new System.Drawing.Point(94, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 26);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 7;
             this.label3.Text = "Author";
             // 
             // txtNvlAuthor
@@ -108,7 +145,7 @@
             this.txtNvlAuthor.Location = new System.Drawing.Point(190, 91);
             this.txtNvlAuthor.Name = "txtNvlAuthor";
             this.txtNvlAuthor.Size = new System.Drawing.Size(402, 20);
-            this.txtNvlAuthor.TabIndex = 7;
+            this.txtNvlAuthor.TabIndex = 1;
             // 
             // label4
             // 
@@ -126,10 +163,10 @@
             this.txtBoxSynopsis.Location = new System.Drawing.Point(192, 235);
             this.txtBoxSynopsis.Name = "txtBoxSynopsis";
             this.txtBoxSynopsis.Size = new System.Drawing.Size(399, 191);
-            this.txtBoxSynopsis.TabIndex = 10;
+            this.txtBoxSynopsis.TabIndex = 3;
             this.txtBoxSynopsis.Text = "";
             // 
-            // NewNovel
+            // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +181,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNvlTitle);
-            this.Name = "NewNovel";
+            this.Name = "ProjectForm";
             this.Text = "Create New Novel";
             this.ResumeLayout(false);
             this.PerformLayout();

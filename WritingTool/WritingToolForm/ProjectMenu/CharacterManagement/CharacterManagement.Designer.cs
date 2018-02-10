@@ -1,4 +1,4 @@
-﻿namespace WritingToolForm.ProjectMenu.CharacterManagement
+﻿namespace Novelis.ProjectMenu.CharacterManagement
 {
     partial class CharacterForm
     {
