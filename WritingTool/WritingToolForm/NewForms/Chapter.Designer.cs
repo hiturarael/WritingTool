@@ -1,4 +1,6 @@
-﻿namespace Novelis.NewForms
+﻿using System.Windows.Forms;
+
+namespace Novelis.NewForms
 {
     partial class Chapter
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chapter));
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxTitle = new System.Windows.Forms.TextBox();
             this.rtbChapter = new System.Windows.Forms.RichTextBox();
@@ -35,6 +38,12 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblWordCount = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnBold = new System.Windows.Forms.ToolStripButton();
+            this.btnItalic = new System.Windows.Forms.ToolStripButton();
+            this.btnUnderline = new System.Windows.Forms.ToolStripButton();
+            this.btnStrike = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -55,11 +64,13 @@
             // 
             // rtbChapter
             // 
+            this.rtbChapter.AcceptsTab = true;
             this.rtbChapter.Location = new System.Drawing.Point(15, 122);
             this.rtbChapter.Name = "rtbChapter";
             this.rtbChapter.Size = new System.Drawing.Size(1176, 577);
             this.rtbChapter.TabIndex = 2;
             this.rtbChapter.Text = "";
+            this.rtbChapter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RtbChapter_KeyPress);
             // 
             // btnSaveChapter
             // 
@@ -97,11 +108,67 @@
             this.lblWordCount.TabIndex = 6;
             this.lblWordCount.Text = "####";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBold,
+            this.btnItalic,
+            this.btnUnderline,
+            this.btnStrike});
+            this.toolStrip1.Location = new System.Drawing.Point(15, 71);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(135, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnBold
+            // 
+            this.btnBold.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnBold.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBold.Image = ((System.Drawing.Image)(resources.GetObject("btnBold.Image")));
+            this.btnBold.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBold.Name = "btnBold";
+            this.btnBold.Size = new System.Drawing.Size(23, 22);
+            this.btnBold.Text = "B";
+            this.btnBold.Click += new System.EventHandler(this.BtnBold_Click);
+            // 
+            // btnItalic
+            // 
+            this.btnItalic.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnItalic.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItalic.Image = ((System.Drawing.Image)(resources.GetObject("btnItalic.Image")));
+            this.btnItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnItalic.Name = "btnItalic";
+            this.btnItalic.Size = new System.Drawing.Size(23, 22);
+            this.btnItalic.Text = "I";
+            // 
+            // btnUnderline
+            // 
+            this.btnUnderline.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnUnderline.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnderline.Image = ((System.Drawing.Image)(resources.GetObject("btnUnderline.Image")));
+            this.btnUnderline.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUnderline.Name = "btnUnderline";
+            this.btnUnderline.Size = new System.Drawing.Size(23, 22);
+            this.btnUnderline.Text = "U";
+            // 
+            // btnStrike
+            // 
+            this.btnStrike.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnStrike.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStrike.Image = ((System.Drawing.Image)(resources.GetObject("btnStrike.Image")));
+            this.btnStrike.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnStrike.Name = "btnStrike";
+            this.btnStrike.Size = new System.Drawing.Size(23, 22);
+            this.btnStrike.Text = "S";
+            // 
             // Chapter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 766);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblWordCount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
@@ -111,6 +178,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Chapter";
             this.Text = "Chapter";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,5 +194,10 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblWordCount;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnBold;
+        private System.Windows.Forms.ToolStripButton btnItalic;
+        private System.Windows.Forms.ToolStripButton btnUnderline;
+        private System.Windows.Forms.ToolStripButton btnStrike;
     }
 }

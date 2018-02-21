@@ -61,5 +61,11 @@ namespace Novelis.ProjectMenu
             ProjectStats.ProjectStats statForm = new ProjectStats.ProjectStats(project);
             statForm.ShowDialog();
         }
+
+        private void BtnManageChptr_Click(object sender, EventArgs e)
+        {
+            ChapterManagement.ChapterForm chapterForm = new ChapterManagement.ChapterForm();
+            chapterForm.ShowDialog();
+        }
     }
 }

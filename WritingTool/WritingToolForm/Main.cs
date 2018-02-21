@@ -58,7 +58,12 @@ namespace Novelis
 
             //create the menu and display
             ProjectMenu.ProjectMenu menu = new ProjectMenu.ProjectMenu(newProject);
+
+            Hide();
+
             menu.ShowDialog();
+
+            Show();
         }
 
         /// <summary>
@@ -85,7 +90,12 @@ namespace Novelis
 
             //display the menu
             ProjectMenu.ProjectMenu menu = new ProjectMenu.ProjectMenu(prj);
+
+            Hide();
+
             menu.ShowDialog();
+
+            Show();
         }
 
         /// <summary>
@@ -102,7 +112,6 @@ namespace Novelis
             //Delete the project
             Project.DeleteProject(projectName);
         }
-
         #endregion
 
         #region Functions

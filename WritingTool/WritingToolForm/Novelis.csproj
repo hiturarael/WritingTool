@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\Novel.cs" />
     <Compile Include="Classes\Novelis.cs" />
+    <Compile Include="Classes\TextEditor.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -56,6 +56,7 @@
             this.btnManageChptr.TabIndex = 1;
             this.btnManageChptr.Text = "Manage Chapters";
             this.btnManageChptr.UseVisualStyleBackColor = true;
+            this.btnManageChptr.Click += new System.EventHandler(this.BtnManageChptr_Click);
             // 
             // btnManageRace
             // 
