@@ -42,36 +42,38 @@
             // 
             // txtNvlTitle
             // 
+            this.txtNvlTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNvlTitle.Location = new System.Drawing.Point(190, 43);
             this.txtNvlTitle.Name = "txtNvlTitle";
-            this.txtNvlTitle.Size = new System.Drawing.Size(402, 20);
+            this.txtNvlTitle.Size = new System.Drawing.Size(402, 27);
             this.txtNvlTitle.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 37);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(96, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 26);
+            this.label1.Size = new System.Drawing.Size(38, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Title";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(98, 146);
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(86, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 26);
+            this.label2.Size = new System.Drawing.Size(48, 19);
             this.label2.TabIndex = 8;
             this.label2.Text = "Genre";
             // 
             // btnSaveNvlProp
             // 
-            this.btnSaveNvlProp.Location = new System.Drawing.Point(190, 455);
+            this.btnSaveNvlProp.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveNvlProp.Location = new System.Drawing.Point(192, 455);
             this.btnSaveNvlProp.Name = "btnSaveNvlProp";
-            this.btnSaveNvlProp.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveNvlProp.Size = new System.Drawing.Size(75, 28);
             this.btnSaveNvlProp.TabIndex = 4;
             this.btnSaveNvlProp.Text = "Save";
             this.btnSaveNvlProp.UseVisualStyleBackColor = true;
@@ -79,9 +81,10 @@
             // 
             // btnCancelNvlProp
             // 
-            this.btnCancelNvlProp.Location = new System.Drawing.Point(517, 455);
+            this.btnCancelNvlProp.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelNvlProp.Location = new System.Drawing.Point(516, 455);
             this.btnCancelNvlProp.Name = "btnCancelNvlProp";
-            this.btnCancelNvlProp.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelNvlProp.Size = new System.Drawing.Size(75, 28);
             this.btnCancelNvlProp.TabIndex = 5;
             this.btnCancelNvlProp.Text = "Cancel";
             this.btnCancelNvlProp.UseVisualStyleBackColor = true;
@@ -89,7 +92,9 @@
             // 
             // lbGenres
             // 
+            this.lbGenres.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGenres.FormattingEnabled = true;
+            this.lbGenres.ItemHeight = 19;
             this.lbGenres.Items.AddRange(new object[] {
             "Fiction",
             "Non Fiction",
@@ -127,39 +132,41 @@
             this.lbGenres.Location = new System.Drawing.Point(190, 146);
             this.lbGenres.Name = "lbGenres";
             this.lbGenres.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lbGenres.Size = new System.Drawing.Size(402, 69);
+            this.lbGenres.Size = new System.Drawing.Size(402, 61);
             this.lbGenres.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 85);
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(82, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 26);
+            this.label3.Size = new System.Drawing.Size(52, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "Author";
             // 
             // txtNvlAuthor
             // 
+            this.txtNvlAuthor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNvlAuthor.Location = new System.Drawing.Point(190, 91);
             this.txtNvlAuthor.Name = "txtNvlAuthor";
-            this.txtNvlAuthor.Size = new System.Drawing.Size(402, 20);
+            this.txtNvlAuthor.Size = new System.Drawing.Size(402, 27);
             this.txtNvlAuthor.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(69, 235);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 26);
+            this.label4.Size = new System.Drawing.Size(65, 19);
             this.label4.TabIndex = 9;
             this.label4.Text = "Synopsis";
             // 
             // txtBoxSynopsis
             // 
             this.txtBoxSynopsis.CausesValidation = false;
+            this.txtBoxSynopsis.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxSynopsis.Location = new System.Drawing.Point(192, 235);
             this.txtBoxSynopsis.Name = "txtBoxSynopsis";
             this.txtBoxSynopsis.Size = new System.Drawing.Size(399, 191);

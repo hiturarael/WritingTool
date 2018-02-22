@@ -37,9 +37,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(18, 251);
+            this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(18, 247);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(75, 27);
             this.btnExit.TabIndex = 14;
             this.btnExit.Text = "Main Menu";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -47,16 +48,19 @@
             // 
             // btnDelChapter
             // 
-            this.btnDelChapter.Location = new System.Drawing.Point(18, 81);
+            this.btnDelChapter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelChapter.Location = new System.Drawing.Point(18, 93);
             this.btnDelChapter.Name = "btnDelChapter";
-            this.btnDelChapter.Size = new System.Drawing.Size(122, 23);
+            this.btnDelChapter.Size = new System.Drawing.Size(122, 26);
             this.btnDelChapter.TabIndex = 13;
             this.btnDelChapter.Text = "Delete Chapter";
             this.btnDelChapter.UseVisualStyleBackColor = true;
             // 
             // lbChapters
             // 
+            this.lbChapters.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChapters.FormattingEnabled = true;
+            this.lbChapters.ItemHeight = 19;
             this.lbChapters.Location = new System.Drawing.Point(171, 23);
             this.lbChapters.Name = "lbChapters";
             this.lbChapters.Size = new System.Drawing.Size(352, 251);
@@ -64,18 +68,20 @@
             // 
             // btnLoadChapter
             // 
-            this.btnLoadChapter.Location = new System.Drawing.Point(18, 52);
+            this.btnLoadChapter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadChapter.Location = new System.Drawing.Point(18, 60);
             this.btnLoadChapter.Name = "btnLoadChapter";
-            this.btnLoadChapter.Size = new System.Drawing.Size(122, 23);
+            this.btnLoadChapter.Size = new System.Drawing.Size(122, 27);
             this.btnLoadChapter.TabIndex = 11;
             this.btnLoadChapter.Text = "Load Chapter";
             this.btnLoadChapter.UseVisualStyleBackColor = true;
             // 
             // btnAddChapter
             // 
-            this.btnAddChapter.Location = new System.Drawing.Point(18, 23);
+            this.btnAddChapter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddChapter.Location = new System.Drawing.Point(18, 27);
             this.btnAddChapter.Name = "btnAddChapter";
-            this.btnAddChapter.Size = new System.Drawing.Size(122, 23);
+            this.btnAddChapter.Size = new System.Drawing.Size(122, 27);
             this.btnAddChapter.TabIndex = 10;
             this.btnAddChapter.Text = "Add New Chapter";
             this.btnAddChapter.UseVisualStyleBackColor = true;

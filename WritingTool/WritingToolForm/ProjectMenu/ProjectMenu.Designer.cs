@@ -40,9 +40,10 @@
             // 
             // btnManageChar
             // 
-            this.btnManageChar.Location = new System.Drawing.Point(12, 101);
+            this.btnManageChar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageChar.Location = new System.Drawing.Point(12, 82);
             this.btnManageChar.Name = "btnManageChar";
-            this.btnManageChar.Size = new System.Drawing.Size(183, 23);
+            this.btnManageChar.Size = new System.Drawing.Size(183, 27);
             this.btnManageChar.TabIndex = 0;
             this.btnManageChar.Text = "Manage Characters";
             this.btnManageChar.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@
             // 
             // btnManageChptr
             // 
-            this.btnManageChptr.Location = new System.Drawing.Point(12, 42);
+            this.btnManageChptr.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageChptr.Location = new System.Drawing.Point(12, 26);
             this.btnManageChptr.Name = "btnManageChptr";
-            this.btnManageChptr.Size = new System.Drawing.Size(183, 23);
+            this.btnManageChptr.Size = new System.Drawing.Size(183, 27);
             this.btnManageChptr.TabIndex = 1;
             this.btnManageChptr.Text = "Manage Chapters";
             this.btnManageChptr.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // 
             // btnManageRace
             // 
-            this.btnManageRace.Location = new System.Drawing.Point(12, 130);
+            this.btnManageRace.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageRace.Location = new System.Drawing.Point(12, 115);
             this.btnManageRace.Name = "btnManageRace";
-            this.btnManageRace.Size = new System.Drawing.Size(183, 23);
+            this.btnManageRace.Size = new System.Drawing.Size(183, 27);
             this.btnManageRace.TabIndex = 2;
             this.btnManageRace.Text = "Manage Races";
             this.btnManageRace.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // 
             // btnManageWorld
             // 
-            this.btnManageWorld.Location = new System.Drawing.Point(12, 159);
+            this.btnManageWorld.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageWorld.Location = new System.Drawing.Point(12, 148);
             this.btnManageWorld.Name = "btnManageWorld";
-            this.btnManageWorld.Size = new System.Drawing.Size(183, 23);
+            this.btnManageWorld.Size = new System.Drawing.Size(183, 27);
             this.btnManageWorld.TabIndex = 3;
             this.btnManageWorld.Text = "Manage Locations";
             this.btnManageWorld.UseVisualStyleBackColor = true;
@@ -80,10 +84,11 @@
             // 
             // btnManageCreatures
             // 
+            this.btnManageCreatures.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCreatures.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageCreatures.Location = new System.Drawing.Point(12, 188);
+            this.btnManageCreatures.Location = new System.Drawing.Point(12, 181);
             this.btnManageCreatures.Name = "btnManageCreatures";
-            this.btnManageCreatures.Size = new System.Drawing.Size(183, 23);
+            this.btnManageCreatures.Size = new System.Drawing.Size(183, 27);
             this.btnManageCreatures.TabIndex = 4;
             this.btnManageCreatures.Text = "Manage Creatures";
             this.btnManageCreatures.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // 
             // btnManageArtifacts
             // 
-            this.btnManageArtifacts.Location = new System.Drawing.Point(12, 217);
+            this.btnManageArtifacts.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageArtifacts.Location = new System.Drawing.Point(12, 214);
             this.btnManageArtifacts.Name = "btnManageArtifacts";
-            this.btnManageArtifacts.Size = new System.Drawing.Size(183, 23);
+            this.btnManageArtifacts.Size = new System.Drawing.Size(183, 27);
             this.btnManageArtifacts.TabIndex = 5;
             this.btnManageArtifacts.Text = "Manage Artifacts";
             this.btnManageArtifacts.UseVisualStyleBackColor = true;
@@ -101,9 +107,10 @@
             // 
             // btnPrjStatus
             // 
-            this.btnPrjStatus.Location = new System.Drawing.Point(12, 270);
+            this.btnPrjStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrjStatus.Location = new System.Drawing.Point(12, 272);
             this.btnPrjStatus.Name = "btnPrjStatus";
-            this.btnPrjStatus.Size = new System.Drawing.Size(183, 23);
+            this.btnPrjStatus.Size = new System.Drawing.Size(183, 27);
             this.btnPrjStatus.TabIndex = 6;
             this.btnPrjStatus.Text = "Project Stats";
             this.btnPrjStatus.UseVisualStyleBackColor = true;
@@ -111,9 +118,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(12, 323);
+            this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(12, 329);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(183, 23);
+            this.btnExit.Size = new System.Drawing.Size(183, 27);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Main Menu";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -123,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 368);
+            this.ClientSize = new System.Drawing.Size(213, 368);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPrjStatus);
             this.Controls.Add(this.btnManageArtifacts);

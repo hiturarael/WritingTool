@@ -43,28 +43,34 @@ namespace Novelis.NewForms
             this.btnItalic = new System.Windows.Forms.ToolStripButton();
             this.btnUnderline = new System.Windows.Forms.ToolStripButton();
             this.btnStrike = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.DrpDwnFontStyle = new System.Windows.Forms.ToolStripComboBox();
+            this.DrpDwnFontSize = new System.Windows.Forms.ToolStripComboBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(93, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chapter Title";
             // 
             // txtBoxTitle
             // 
-            this.txtBoxTitle.Location = new System.Drawing.Point(85, 34);
+            this.txtBoxTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTitle.Location = new System.Drawing.Point(111, 34);
             this.txtBoxTitle.Name = "txtBoxTitle";
-            this.txtBoxTitle.Size = new System.Drawing.Size(1106, 20);
+            this.txtBoxTitle.Size = new System.Drawing.Size(1080, 27);
             this.txtBoxTitle.TabIndex = 1;
             // 
             // rtbChapter
             // 
             this.rtbChapter.AcceptsTab = true;
+            this.rtbChapter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbChapter.Location = new System.Drawing.Point(15, 122);
             this.rtbChapter.Name = "rtbChapter";
             this.rtbChapter.Size = new System.Drawing.Size(1176, 577);
@@ -74,18 +80,20 @@ namespace Novelis.NewForms
             // 
             // btnSaveChapter
             // 
-            this.btnSaveChapter.Location = new System.Drawing.Point(1012, 731);
+            this.btnSaveChapter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveChapter.Location = new System.Drawing.Point(1035, 728);
             this.btnSaveChapter.Name = "btnSaveChapter";
-            this.btnSaveChapter.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveChapter.Size = new System.Drawing.Size(75, 26);
             this.btnSaveChapter.TabIndex = 3;
             this.btnSaveChapter.Text = "Save";
             this.btnSaveChapter.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(1116, 731);
+            this.btnCancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(1116, 728);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(75, 26);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -93,32 +101,38 @@ namespace Novelis.NewForms
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 736);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(89, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Word Count:";
             // 
             // lblWordCount
             // 
             this.lblWordCount.AutoSize = true;
-            this.lblWordCount.Location = new System.Drawing.Point(85, 736);
+            this.lblWordCount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWordCount.Location = new System.Drawing.Point(107, 736);
             this.lblWordCount.Name = "lblWordCount";
-            this.lblWordCount.Size = new System.Drawing.Size(35, 13);
+            this.lblWordCount.Size = new System.Drawing.Size(41, 19);
             this.lblWordCount.TabIndex = 6;
             this.lblWordCount.Text = "####";
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBold,
             this.btnItalic,
             this.btnUnderline,
-            this.btnStrike});
+            this.btnStrike,
+            this.toolStripSeparator1,
+            this.DrpDwnFontStyle,
+            this.DrpDwnFontSize});
             this.toolStrip1.Location = new System.Drawing.Point(15, 71);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(135, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(356, 27);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -129,7 +143,7 @@ namespace Novelis.NewForms
             this.btnBold.Image = ((System.Drawing.Image)(resources.GetObject("btnBold.Image")));
             this.btnBold.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBold.Name = "btnBold";
-            this.btnBold.Size = new System.Drawing.Size(23, 22);
+            this.btnBold.Size = new System.Drawing.Size(23, 24);
             this.btnBold.Text = "B";
             this.btnBold.Click += new System.EventHandler(this.BtnBold_Click);
             // 
@@ -140,8 +154,9 @@ namespace Novelis.NewForms
             this.btnItalic.Image = ((System.Drawing.Image)(resources.GetObject("btnItalic.Image")));
             this.btnItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnItalic.Name = "btnItalic";
-            this.btnItalic.Size = new System.Drawing.Size(23, 22);
+            this.btnItalic.Size = new System.Drawing.Size(23, 24);
             this.btnItalic.Text = "I";
+            this.btnItalic.Click += new System.EventHandler(this.BtnItalic_Click);
             // 
             // btnUnderline
             // 
@@ -150,8 +165,9 @@ namespace Novelis.NewForms
             this.btnUnderline.Image = ((System.Drawing.Image)(resources.GetObject("btnUnderline.Image")));
             this.btnUnderline.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUnderline.Name = "btnUnderline";
-            this.btnUnderline.Size = new System.Drawing.Size(23, 22);
+            this.btnUnderline.Size = new System.Drawing.Size(23, 24);
             this.btnUnderline.Text = "U";
+            this.btnUnderline.Click += new System.EventHandler(this.BtnUnderline_Click);
             // 
             // btnStrike
             // 
@@ -160,8 +176,26 @@ namespace Novelis.NewForms
             this.btnStrike.Image = ((System.Drawing.Image)(resources.GetObject("btnStrike.Image")));
             this.btnStrike.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnStrike.Name = "btnStrike";
-            this.btnStrike.Size = new System.Drawing.Size(23, 22);
+            this.btnStrike.Size = new System.Drawing.Size(23, 24);
             this.btnStrike.Text = "S";
+            this.btnStrike.Click += new System.EventHandler(this.BtnStrike_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // DrpDwnFontStyle
+            // 
+            this.DrpDwnFontStyle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrpDwnFontStyle.Name = "DrpDwnFontStyle";
+            this.DrpDwnFontStyle.Size = new System.Drawing.Size(121, 27);
+            // 
+            // DrpDwnFontSize
+            // 
+            this.DrpDwnFontSize.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrpDwnFontSize.Name = "DrpDwnFontSize";
+            this.DrpDwnFontSize.Size = new System.Drawing.Size(121, 27);
             // 
             // Chapter
             // 
@@ -178,6 +212,7 @@ namespace Novelis.NewForms
             this.Controls.Add(this.label1);
             this.Name = "Chapter";
             this.Text = "Chapter";
+            this.Load += new System.EventHandler(this.Chapter_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -199,5 +234,8 @@ namespace Novelis.NewForms
         private System.Windows.Forms.ToolStripButton btnItalic;
         private System.Windows.Forms.ToolStripButton btnUnderline;
         private System.Windows.Forms.ToolStripButton btnStrike;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripComboBox DrpDwnFontStyle;
+        private ToolStripComboBox DrpDwnFontSize;
     }
 }

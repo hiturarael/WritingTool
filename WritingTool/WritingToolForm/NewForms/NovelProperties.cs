@@ -83,6 +83,11 @@ namespace Novelis.NewForms
                 //perform the save functions
                 Project.SaveProject(project, isNewProject);
 
+                //create the menu and display
+                ProjectMenu.ProjectMenu menu = new ProjectMenu.ProjectMenu(project);
+
+                menu.ShowDialog();
+
                 //close this open the project menu
                 Close();
             }

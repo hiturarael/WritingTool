@@ -51,10 +51,12 @@
             // 
             // listBoxPrjs
             // 
+            this.listBoxPrjs.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxPrjs.FormattingEnabled = true;
+            this.listBoxPrjs.ItemHeight = 19;
             this.listBoxPrjs.Location = new System.Drawing.Point(8, 19);
             this.listBoxPrjs.Name = "listBoxPrjs";
-            this.listBoxPrjs.Size = new System.Drawing.Size(326, 329);
+            this.listBoxPrjs.Size = new System.Drawing.Size(326, 327);
             this.listBoxPrjs.TabIndex = 0;
             // 
             // groupBox2
@@ -71,6 +73,7 @@
             // 
             // btnDelProj
             // 
+            this.btnDelProj.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelProj.Location = new System.Drawing.Point(71, 118);
             this.btnDelProj.Name = "btnDelProj";
             this.btnDelProj.Size = new System.Drawing.Size(100, 23);
@@ -81,6 +84,7 @@
             // 
             // btnStats
             // 
+            this.btnStats.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStats.Location = new System.Drawing.Point(71, 167);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(100, 23);
@@ -90,6 +94,7 @@
             // 
             // brnLoadPrj
             // 
+            this.brnLoadPrj.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnLoadPrj.Location = new System.Drawing.Point(71, 68);
             this.brnLoadPrj.Name = "brnLoadPrj";
             this.brnLoadPrj.Size = new System.Drawing.Size(100, 23);
@@ -100,6 +105,7 @@
             // 
             // btnNewPrj
             // 
+            this.btnNewPrj.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewPrj.Location = new System.Drawing.Point(71, 19);
             this.btnNewPrj.Name = "btnNewPrj";
             this.btnNewPrj.Size = new System.Drawing.Size(100, 23);
@@ -111,9 +117,10 @@
             // lblVrsnNum
             // 
             this.lblVrsnNum.AutoSize = true;
+            this.lblVrsnNum.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVrsnNum.Location = new System.Drawing.Point(12, 363);
             this.lblVrsnNum.Name = "lblVrsnNum";
-            this.lblVrsnNum.Size = new System.Drawing.Size(88, 13);
+            this.lblVrsnNum.Size = new System.Drawing.Size(120, 19);
             this.lblVrsnNum.TabIndex = 2;
             this.lblVrsnNum.Text = "Version Number: ";
             // 

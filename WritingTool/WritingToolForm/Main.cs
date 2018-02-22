@@ -51,17 +51,12 @@ namespace Novelis
 
             //create a new form and display
             NewForms.ProjectForm newForm = new NewForms.ProjectForm(newProject, true);
+
+            Hide();
             newForm.ShowDialog();
 
             //update the project display panel
             WriteProjectLoadDisplay();
-
-            //create the menu and display
-            ProjectMenu.ProjectMenu menu = new ProjectMenu.ProjectMenu(newProject);
-
-            Hide();
-
-            menu.ShowDialog();
 
             Show();
         }
