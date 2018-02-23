@@ -29,49 +29,69 @@ namespace Novelis.NewForms
 
             if((ModifierKeys & Keys.Control) == Keys.Control && e.KeyChar == 2)
             {
-                TextEditor.Bold(rtbChapter);
+                TextEditor.Bold(rtbChapter, btnBold);
             }
 
             if ((ModifierKeys & Keys.Control) == Keys.Control && e.KeyChar== 9)
             {
-                TextEditor.Italics(rtbChapter);
+                TextEditor.Italics(rtbChapter, btnItalic);
             }
 
             if ((ModifierKeys & Keys.Control) == Keys.Control && e.KeyChar == 21)
             {
-                TextEditor.Underline(rtbChapter);
+                TextEditor.Underline(rtbChapter, btnUnderline);
             }
 
             if ((ModifierKeys & Keys.Control) == Keys.Control && e.KeyChar==20)
             {
-                TextEditor.Strikethrough(rtbChapter);
+                TextEditor.Strikethrough(rtbChapter, btnStrike);
             }
         }
 
         private void BtnBold_Click(object sender, EventArgs e)
         {
-            TextEditor.Bold(rtbChapter);
+            TextEditor.Bold(rtbChapter, btnBold);
         }
 
         private void BtnItalic_Click(object sender, EventArgs e)
         {
-            TextEditor.Italics(rtbChapter);
+            TextEditor.Italics(rtbChapter, btnItalic);
         }
 
         private void BtnUnderline_Click(object sender, EventArgs e)
         {
-            TextEditor.Underline(rtbChapter);
+            TextEditor.Underline(rtbChapter, btnUnderline);
         }
 
         private void BtnStrike_Click(object sender, EventArgs e)
         {
-            TextEditor.Strikethrough(rtbChapter);
+            TextEditor.Strikethrough(rtbChapter, btnStrike);
         }
 
         private void Chapter_Load(object sender, EventArgs e)
         {
             TextEditor.GetFontCollection(DrpDwnFontStyle);
-            TextEditor.GetFontSizeCollection(DrpDwnFontSize);
+            TextEditor.GetFontSizeCollection(DrpDwnFontSize, rtbChapter.Font);
+        }
+
+        private void DrpDwnFontStyle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextEditor.SetFontFamily(rtbChapter, DrpDwnFontStyle);
+        }
+
+        private void DrpDwnFontSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextEditor.SetFontSize(rtbChapter, DrpDwnFontSize);
+        }
+
+        private void rtbChapter_MouseUp(object sender, MouseEventArgs e)
+        {
+            TextEditor.UpdateFontStyle(rtbChapter, DrpDwnFontStyle, DrpDwnFontSize, btnBold, btnItalic, btnUnderline, btnStrike);
+        }
+
+        private void rtbChapter_KeyUp(object sender, KeyEventArgs e)
+        {
+            TextEditor.UpdateFontStyle(rtbChapter, DrpDwnFontStyle, DrpDwnFontSize, btnBold, btnItalic, btnUnderline, btnStrike);
         }
     }
 }

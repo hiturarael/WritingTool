@@ -27,6 +27,20 @@ namespace Novelis
 
             txtBox.SelectionFont = New;
         }
+
+        public static void Bold(RichTextBox txtBox, ToolStripButton btn)
+        {
+            bool bold = txtBox.SelectionFont.Bold;
+            Bold(txtBox);
+
+            if (bold)
+            {
+                btn.BackColor = Color.Silver;
+            } else
+            {
+                btn.BackColor = Color.Transparent;
+            }
+        }
         
         public static void Italics(RichTextBox txtBox)
         {
@@ -43,6 +57,21 @@ namespace Novelis
             }
 
             txtBox.SelectionFont = New;
+        }
+
+        public static void Italics(RichTextBox txtBox, ToolStripButton btn)
+        {
+            bool italics = txtBox.SelectionFont.Italic;
+            Italics(txtBox);
+
+            if (italics)
+            {
+                btn.BackColor = Color.Silver;
+            }
+            else
+            {
+                btn.BackColor = Color.Transparent;
+            }
         }
 
         public static void Underline(RichTextBox txtBox)
@@ -62,6 +91,21 @@ namespace Novelis
             txtBox.SelectionFont = New;
         }
 
+        public static void Underline(RichTextBox txtBox, ToolStripButton btn)
+        {
+            bool underline = txtBox.SelectionFont.Underline;
+            Underline(txtBox);
+
+            if (underline)
+            {
+                btn.BackColor = Color.Silver;
+            }
+            else
+            {
+                btn.BackColor = Color.Transparent;
+            }
+        }
+
         public static void Strikethrough(RichTextBox txtBox)
         {
             Font old = txtBox.SelectionFont;
@@ -79,6 +123,82 @@ namespace Novelis
             txtBox.SelectionFont = New;
         }
 
+        public static void Strikethrough(RichTextBox txtBox, ToolStripButton btn)
+        {
+            bool strike = txtBox.SelectionFont.Underline;
+            Strikethrough(txtBox);
+
+            if (strike)
+            {
+                btn.BackColor = Color.Silver;
+            }
+            else
+            {
+                btn.BackColor = Color.Transparent;
+            }
+        }
+
+        public static void SetFontFamily(RichTextBox txtBox, ComboBox fontBox)
+        {
+            Font old = txtBox.SelectionFont;
+            try
+            {
+                Font New = new Font(fontBox.SelectedItem.ToString(), old.Size, old.Style);
+
+                txtBox.SelectionFont = New;
+            }
+            catch (NullReferenceException ex)
+            {
+
+            }
+        }
+
+        public static void SetFontFamily(RichTextBox txtBox, ToolStripComboBox fontBox)
+        {
+            Font old = txtBox.SelectionFont;
+            try
+            {
+                Font New = new Font(fontBox.SelectedItem.ToString(), old.Size, old.Style);
+
+                txtBox.SelectionFont = New;
+            }
+            catch (NullReferenceException ex)
+            {
+
+            }
+        }
+
+        public static void SetFontSize(RichTextBox txtBox, ComboBox fontBox)
+        {
+            Font old = txtBox.SelectionFont;
+
+            try
+            {
+                Font New = new Font(old.FontFamily, Convert.ToInt16(fontBox.SelectedItem.ToString()), old.Style);
+
+                txtBox.SelectionFont = New;
+            }
+            catch (NullReferenceException ex)
+            {
+
+            }
+        }
+
+        public static void SetFontSize(RichTextBox txtBox, ToolStripComboBox fontBox)
+        {
+            Font old = txtBox.SelectionFont;
+
+            try
+            {
+                Font New = new Font(old.FontFamily, Convert.ToInt16(fontBox.SelectedItem.ToString()), old.Style);
+
+                txtBox.SelectionFont = New;
+            } catch (NullReferenceException ex)
+            {
+                
+            }
+        }
+
         public static void GetFontCollection(ComboBox fontBox)
         {
             InstalledFontCollection fonts = new InstalledFontCollection();
@@ -88,7 +208,7 @@ namespace Novelis
                 fontBox.Items.Add(font.Name);
             }
 
-            fontBox.SelectedIndex = 0;
+            fontBox.SelectedItem = fontBox.Font.Name;
         }
 
         public static void GetFontCollection(ToolStripComboBox fontBox)
@@ -100,7 +220,7 @@ namespace Novelis
                 fontBox.Items.Add(font.Name);
             }
 
-            fontBox.SelectedIndex = 0;
+            fontBox.SelectedItem = fontBox.Font.Name;
         }
 
         public static void GetFontSizeCollection(ComboBox sizeBox)
@@ -112,20 +232,89 @@ namespace Novelis
                 sizeBox.Items.Add(size);
             }
 
-            sizeBox.SelectedIndex = 2;
+            sizeBox.SelectedItem = sizeBox.Font.Size.ToString();
         }
 
-        public static void GetFontSizeCollection(ToolStripComboBox sizeBox)
+        public static void GetFontSizeCollection(ToolStripComboBox sizeBox, Font baseFont)
         {
             int[] sizes = { 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72 };
+            int selection = 0;
+            int loopIteration = 0;
 
             foreach (int size in sizes)
             {
+                if(size == baseFont.Size)
+                {
+                    selection = loopIteration;
+                }
+
                 sizeBox.Items.Add(size);
+                loopIteration++;
             }
 
-            sizeBox.SelectedIndex = 2;
+            sizeBox.SelectedItem = sizeBox.Items[selection];
         }
+
+        public static void UpdateFontStyle(RichTextBox txtBox, ToolStripComboBox fontName, ToolStripComboBox fontSize, ToolStripButton bold, 
+                                           ToolStripButton italic, ToolStripButton underline, ToolStripButton strike)
+        {
+            Font font = txtBox.SelectionFont;
+
+            if (font != null)
+            {
+                #region buttons
+                if (font.Bold)
+                {
+                    bold.BackColor = Color.Silver;
+                }
+                else
+                {
+                    bold.BackColor = Color.Transparent;
+                }
+
+                if (font.Italic)
+                {
+                    italic.BackColor = Color.Silver;
+                }
+                else
+                {
+                    italic.BackColor = Color.Transparent;
+                }
+
+                if (font.Underline)
+                {
+                    underline.BackColor = Color.Silver;
+                }
+                else
+                {
+                    underline.BackColor = Color.Transparent;
+                }
+
+                if (font.Strikeout)
+                {
+                    strike.BackColor = Color.Silver;
+                }
+                else
+                {
+                    strike.BackColor = Color.Transparent;
+                }
+
+                #endregion
+
+                #region dropdowns
+                fontName.SelectedItem = font.FontFamily.Name;
+
+                foreach (object item in fontSize.Items)
+                {
+                    if (item.ToString() == font.Size.ToString())
+                    {
+                        fontSize.SelectedItem = item;
+                    }
+                }
+                #endregion
+            }
+        }
+
         #endregion
 
         #region Undo/Redo

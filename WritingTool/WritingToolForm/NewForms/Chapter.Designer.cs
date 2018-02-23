@@ -77,6 +77,8 @@ namespace Novelis.NewForms
             this.rtbChapter.TabIndex = 2;
             this.rtbChapter.Text = "";
             this.rtbChapter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RtbChapter_KeyPress);
+            this.rtbChapter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.rtbChapter_KeyUp);
+            this.rtbChapter.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rtbChapter_MouseUp);
             // 
             // btnSaveChapter
             // 
@@ -138,6 +140,7 @@ namespace Novelis.NewForms
             // 
             // btnBold
             // 
+            this.btnBold.BackColor = System.Drawing.Color.Transparent;
             this.btnBold.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.btnBold.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBold.Image = ((System.Drawing.Image)(resources.GetObject("btnBold.Image")));
@@ -190,12 +193,14 @@ namespace Novelis.NewForms
             this.DrpDwnFontStyle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DrpDwnFontStyle.Name = "DrpDwnFontStyle";
             this.DrpDwnFontStyle.Size = new System.Drawing.Size(121, 27);
+            this.DrpDwnFontStyle.SelectedIndexChanged += new System.EventHandler(this.DrpDwnFontStyle_SelectedIndexChanged);
             // 
             // DrpDwnFontSize
             // 
             this.DrpDwnFontSize.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DrpDwnFontSize.Name = "DrpDwnFontSize";
             this.DrpDwnFontSize.Size = new System.Drawing.Size(121, 27);
+            this.DrpDwnFontSize.SelectedIndexChanged += new System.EventHandler(this.DrpDwnFontSize_SelectedIndexChanged);
             // 
             // Chapter
             // 
