@@ -33,6 +33,8 @@ namespace Novelis
             bool bold = txtBox.SelectionFont.Bold;
             Bold(txtBox);
 
+            bold = txtBox.SelectionFont.Bold;
+
             if (bold)
             {
                 btn.BackColor = Color.Silver;
@@ -62,7 +64,10 @@ namespace Novelis
         public static void Italics(RichTextBox txtBox, ToolStripButton btn)
         {
             bool italics = txtBox.SelectionFont.Italic;
+
             Italics(txtBox);
+
+            italics = txtBox.SelectionFont.Italic;
 
             if (italics)
             {
@@ -96,6 +101,8 @@ namespace Novelis
             bool underline = txtBox.SelectionFont.Underline;
             Underline(txtBox);
 
+            underline = txtBox.SelectionFont.Underline;
+
             if (underline)
             {
                 btn.BackColor = Color.Silver;
@@ -127,6 +134,8 @@ namespace Novelis
         {
             bool strike = txtBox.SelectionFont.Underline;
             Strikethrough(txtBox);
+
+            strike = txtBox.SelectionFont.Underline;
 
             if (strike)
             {
