@@ -150,62 +150,33 @@ namespace Novelis
         public static void SetFontFamily(RichTextBox txtBox, ComboBox fontBox)
         {
             Font old = txtBox.SelectionFont;
-            try
-            {
-                Font New = new Font(fontBox.SelectedItem.ToString(), old.Size, old.Style);
+            Font New = new Font(fontBox.SelectedItem.ToString(), old.Size, old.Style);
 
-                txtBox.SelectionFont = New;
-            }
-            catch (NullReferenceException ex)
-            {
-
-            }
+            txtBox.SelectionFont = New;
         }
 
         public static void SetFontFamily(RichTextBox txtBox, ToolStripComboBox fontBox)
         {
             Font old = txtBox.SelectionFont;
-            try
-            {
-                Font New = new Font(fontBox.SelectedItem.ToString(), old.Size, old.Style);
+            Font New = new Font(fontBox.SelectedItem.ToString(), old.Size, old.Style);
 
-                txtBox.SelectionFont = New;
-            }
-            catch (NullReferenceException ex)
-            {
-
-            }
+            txtBox.SelectionFont = New;
         }
 
         public static void SetFontSize(RichTextBox txtBox, ComboBox fontBox)
         {
             Font old = txtBox.SelectionFont;
+            Font New = new Font(old.FontFamily, Convert.ToInt16(fontBox.SelectedItem.ToString()), old.Style);
 
-            try
-            {
-                Font New = new Font(old.FontFamily, Convert.ToInt16(fontBox.SelectedItem.ToString()), old.Style);
-
-                txtBox.SelectionFont = New;
-            }
-            catch (NullReferenceException ex)
-            {
-
-            }
+            txtBox.SelectionFont = New;
         }
 
         public static void SetFontSize(RichTextBox txtBox, ToolStripComboBox fontBox)
         {
             Font old = txtBox.SelectionFont;
+            Font New = new Font(old.FontFamily, Convert.ToInt16(fontBox.SelectedItem.ToString()), old.Style);
 
-            try
-            {
-                Font New = new Font(old.FontFamily, Convert.ToInt16(fontBox.SelectedItem.ToString()), old.Style);
-
-                txtBox.SelectionFont = New;
-            } catch (NullReferenceException ex)
-            {
-                
-            }
+            txtBox.SelectionFont = New;
         }
 
         public static void GetFontCollection(ComboBox fontBox)
@@ -328,6 +299,16 @@ namespace Novelis
 
         #region Undo/Redo
 
+        #endregion
+
+        #region Copy/Paste/Cut
+        #endregion
+
+        #region Save
+        public static void Save(string filepath, string fileName)
+        {
+            int fileNum = 0;
+        }
         #endregion
     }
 }

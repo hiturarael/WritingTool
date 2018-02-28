@@ -12,8 +12,11 @@ namespace Novelis.ProjectMenu.ChapterManagement
 {
     public partial class ChapterForm : Form
     {
-        public ChapterForm()
+        Project project = new Project();
+
+        public ChapterForm(Project prj)
         {
+            project = prj;
             InitializeComponent();
         }
 
@@ -24,7 +27,7 @@ namespace Novelis.ProjectMenu.ChapterManagement
 
         private void BtnAddChapter_Click(object sender, EventArgs e)
         {
-            NewForms.Chapter newChapter = new NewForms.Chapter();
+            NewForms.Chapter newChapter = new NewForms.Chapter(project);
 
             newChapter.ShowDialog();
         }

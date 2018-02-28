@@ -13,8 +13,11 @@ namespace Novelis.NewForms
 {
     public partial class Chapter : Form
     {
-        public Chapter()
+        public Project project;
+
+        public Chapter(Project prj)
         {
+            project = prj;
             InitializeComponent();
         }
 
@@ -84,14 +87,20 @@ namespace Novelis.NewForms
             TextEditor.SetFontSize(rtbChapter, DrpDwnFontSize);
         }
 
-        private void rtbChapter_MouseUp(object sender, MouseEventArgs e)
+        private void RtbChapter_MouseUp(object sender, MouseEventArgs e)
         {
             TextEditor.UpdateFontStyle(rtbChapter, DrpDwnFontStyle, DrpDwnFontSize, btnBold, btnItalic, btnUnderline, btnStrike);
         }
 
-        private void rtbChapter_KeyUp(object sender, KeyEventArgs e)
+        private void RtbChapter_KeyUp(object sender, KeyEventArgs e)
         {
             TextEditor.UpdateFontStyle(rtbChapter, DrpDwnFontStyle, DrpDwnFontSize, btnBold, btnItalic, btnUnderline, btnStrike);
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
+            TextEditor.Save(project.GetChapterFilepath(), "prj_chp_");
         }
     }
 }

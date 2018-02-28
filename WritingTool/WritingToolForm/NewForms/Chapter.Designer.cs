@@ -34,10 +34,6 @@ namespace Novelis.NewForms
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxTitle = new System.Windows.Forms.TextBox();
             this.rtbChapter = new System.Windows.Forms.RichTextBox();
-            this.btnSaveChapter = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblWordCount = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBold = new System.Windows.Forms.ToolStripButton();
             this.btnItalic = new System.Windows.Forms.ToolStripButton();
@@ -46,14 +42,22 @@ namespace Novelis.NewForms
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.DrpDwnFontStyle = new System.Windows.Forms.ToolStripComboBox();
             this.DrpDwnFontSize = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnPaste = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblWordcount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnCopy = new System.Windows.Forms.ToolStripButton();
+            this.btnCut = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 37);
+            this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 19);
             this.label1.TabIndex = 0;
@@ -61,70 +65,41 @@ namespace Novelis.NewForms
             // 
             // txtBoxTitle
             // 
+            this.txtBoxTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxTitle.Location = new System.Drawing.Point(111, 34);
+            this.txtBoxTitle.Location = new System.Drawing.Point(111, 23);
             this.txtBoxTitle.Name = "txtBoxTitle";
-            this.txtBoxTitle.Size = new System.Drawing.Size(1080, 27);
+            this.txtBoxTitle.Size = new System.Drawing.Size(561, 27);
             this.txtBoxTitle.TabIndex = 1;
             // 
             // rtbChapter
             // 
             this.rtbChapter.AcceptsTab = true;
+            this.rtbChapter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbChapter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbChapter.Location = new System.Drawing.Point(15, 122);
+            this.rtbChapter.Location = new System.Drawing.Point(0, 122);
             this.rtbChapter.Name = "rtbChapter";
-            this.rtbChapter.Size = new System.Drawing.Size(1176, 577);
+            this.rtbChapter.Size = new System.Drawing.Size(1203, 451);
             this.rtbChapter.TabIndex = 2;
             this.rtbChapter.Text = "";
             this.rtbChapter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RtbChapter_KeyPress);
-            this.rtbChapter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.rtbChapter_KeyUp);
-            this.rtbChapter.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rtbChapter_MouseUp);
-            // 
-            // btnSaveChapter
-            // 
-            this.btnSaveChapter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveChapter.Location = new System.Drawing.Point(1035, 728);
-            this.btnSaveChapter.Name = "btnSaveChapter";
-            this.btnSaveChapter.Size = new System.Drawing.Size(75, 26);
-            this.btnSaveChapter.TabIndex = 3;
-            this.btnSaveChapter.Text = "Save";
-            this.btnSaveChapter.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(1116, 728);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 26);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 736);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 19);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Word Count:";
-            // 
-            // lblWordCount
-            // 
-            this.lblWordCount.AutoSize = true;
-            this.lblWordCount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWordCount.Location = new System.Drawing.Point(107, 736);
-            this.lblWordCount.Name = "lblWordCount";
-            this.lblWordCount.Size = new System.Drawing.Size(41, 19);
-            this.lblWordCount.TabIndex = 6;
-            this.lblWordCount.Text = "####";
+            this.rtbChapter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.RtbChapter_KeyUp);
+            this.rtbChapter.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RtbChapter_MouseUp);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnSave,
+            this.btnCut,
+            this.btnCopy,
+            this.btnPaste,
+            this.toolStripSeparator2,
             this.btnBold,
             this.btnItalic,
             this.btnUnderline,
@@ -134,7 +109,7 @@ namespace Novelis.NewForms
             this.DrpDwnFontSize});
             this.toolStrip1.Location = new System.Drawing.Point(15, 71);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(356, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(510, 31);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -146,7 +121,7 @@ namespace Novelis.NewForms
             this.btnBold.Image = ((System.Drawing.Image)(resources.GetObject("btnBold.Image")));
             this.btnBold.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBold.Name = "btnBold";
-            this.btnBold.Size = new System.Drawing.Size(23, 24);
+            this.btnBold.Size = new System.Drawing.Size(23, 28);
             this.btnBold.Text = "B";
             this.btnBold.Click += new System.EventHandler(this.BtnBold_Click);
             // 
@@ -157,7 +132,7 @@ namespace Novelis.NewForms
             this.btnItalic.Image = ((System.Drawing.Image)(resources.GetObject("btnItalic.Image")));
             this.btnItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnItalic.Name = "btnItalic";
-            this.btnItalic.Size = new System.Drawing.Size(23, 24);
+            this.btnItalic.Size = new System.Drawing.Size(23, 28);
             this.btnItalic.Text = "I";
             this.btnItalic.Click += new System.EventHandler(this.BtnItalic_Click);
             // 
@@ -168,7 +143,7 @@ namespace Novelis.NewForms
             this.btnUnderline.Image = ((System.Drawing.Image)(resources.GetObject("btnUnderline.Image")));
             this.btnUnderline.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUnderline.Name = "btnUnderline";
-            this.btnUnderline.Size = new System.Drawing.Size(23, 24);
+            this.btnUnderline.Size = new System.Drawing.Size(23, 28);
             this.btnUnderline.Text = "U";
             this.btnUnderline.Click += new System.EventHandler(this.BtnUnderline_Click);
             // 
@@ -179,39 +154,98 @@ namespace Novelis.NewForms
             this.btnStrike.Image = ((System.Drawing.Image)(resources.GetObject("btnStrike.Image")));
             this.btnStrike.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnStrike.Name = "btnStrike";
-            this.btnStrike.Size = new System.Drawing.Size(23, 24);
+            this.btnStrike.Size = new System.Drawing.Size(23, 28);
             this.btnStrike.Text = "S";
             this.btnStrike.Click += new System.EventHandler(this.BtnStrike_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // DrpDwnFontStyle
             // 
             this.DrpDwnFontStyle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DrpDwnFontStyle.Name = "DrpDwnFontStyle";
-            this.DrpDwnFontStyle.Size = new System.Drawing.Size(121, 27);
+            this.DrpDwnFontStyle.Size = new System.Drawing.Size(121, 31);
             this.DrpDwnFontStyle.SelectedIndexChanged += new System.EventHandler(this.DrpDwnFontStyle_SelectedIndexChanged);
             // 
             // DrpDwnFontSize
             // 
             this.DrpDwnFontSize.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DrpDwnFontSize.Name = "DrpDwnFontSize";
-            this.DrpDwnFontSize.Size = new System.Drawing.Size(121, 27);
+            this.DrpDwnFontSize.Size = new System.Drawing.Size(121, 31);
             this.DrpDwnFontSize.SelectedIndexChanged += new System.EventHandler(this.DrpDwnFontSize_SelectedIndexChanged);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            // 
+            // btnPaste
+            // 
+            this.btnPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnPaste.Font = new System.Drawing.Font("Wingdings 2", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnPaste.Image = ((System.Drawing.Image)(resources.GetObject("btnPaste.Image")));
+            this.btnPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPaste.Name = "btnPaste";
+            this.btnPaste.Size = new System.Drawing.Size(26, 28);
+            this.btnPaste.Text = "2";
+            // 
+            // btnSave
+            // 
+            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSave.Font = new System.Drawing.Font("Wingdings", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(33, 28);
+            this.btnSave.Text = "<";
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblWordcount});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 576);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1203, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblWordcount
+            // 
+            this.lblWordcount.Name = "lblWordcount";
+            this.lblWordcount.Size = new System.Drawing.Size(70, 17);
+            this.lblWordcount.Text = "Wordcount:";
+            // 
+            // btnCopy
+            // 
+            this.btnCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnCopy.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnCopy.Image = ((System.Drawing.Image)(resources.GetObject("btnCopy.Image")));
+            this.btnCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCopy.Name = "btnCopy";
+            this.btnCopy.Size = new System.Drawing.Size(26, 28);
+            this.btnCopy.Text = "4";
+            // 
+            // btnCut
+            // 
+            this.btnCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnCut.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnCut.Image = ((System.Drawing.Image)(resources.GetObject("btnCut.Image")));
+            this.btnCut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCut.Name = "btnCut";
+            this.btnCut.Size = new System.Drawing.Size(30, 28);
+            this.btnCut.Text = "\"";
             // 
             // Chapter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 766);
+            this.ClientSize = new System.Drawing.Size(1203, 598);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.lblWordCount);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSaveChapter);
             this.Controls.Add(this.rtbChapter);
             this.Controls.Add(this.txtBoxTitle);
             this.Controls.Add(this.label1);
@@ -220,6 +254,8 @@ namespace Novelis.NewForms
             this.Load += new System.EventHandler(this.Chapter_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,10 +266,6 @@ namespace Novelis.NewForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxTitle;
         private System.Windows.Forms.RichTextBox rtbChapter;
-        private System.Windows.Forms.Button btnSaveChapter;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblWordCount;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnBold;
         private System.Windows.Forms.ToolStripButton btnItalic;
@@ -242,5 +274,12 @@ namespace Novelis.NewForms
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripComboBox DrpDwnFontStyle;
         private ToolStripComboBox DrpDwnFontSize;
+        private ToolStripButton btnSave;
+        private ToolStripButton btnPaste;
+        private ToolStripSeparator toolStripSeparator2;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel lblWordcount;
+        private ToolStripButton btnCut;
+        private ToolStripButton btnCopy;
     }
 }

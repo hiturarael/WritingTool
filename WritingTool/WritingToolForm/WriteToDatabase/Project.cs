@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace Novelis
 {
@@ -86,6 +87,7 @@ namespace Novelis
             novel = new Novel();
         }
 
+        #region save/delete project and new directory
         public static void SaveProject(Project prj, bool isNewProject)
         {
             if(!isNewProject)
@@ -203,7 +205,9 @@ namespace Novelis
                 MessageBox.Show(ex.Message, "Exception Occured", MessageBoxButtons.OK);
             }
         }
+        #endregion
 
+        #region Covers
         private static void NewCover(Project prj)
         {
             string file = prj.GetFilepath() + prj.GetTitle() + "\\Cover.xml";
@@ -216,7 +220,6 @@ namespace Novelis
 
             using (XmlWriter writer = XmlWriter.Create(file, settings))
             {
-
                 writer.WriteStartDocument();
                 writer.WriteStartElement("Project");
 
@@ -338,31 +341,48 @@ namespace Novelis
             }
 
         }
+        #endregion
 
-    }
-
-    public static class XmlDocumentExtensions
-    {
-        public static void IterateThroughAllNodes(this XmlDocument doc, Action<XmlNode> elementVisitor)
+        #region Chapter List XML
+        public static void EditChapterDirectory(Project prj, string filename)
         {
-            if (doc != null && elementVisitor != null)
+            string file = prj.GetChapterFilepath() + "\\index.xml";
+
+            XDocument index = XDocument.Load(file);
+
+            XElement root = index.Element("Chapters Collection");
+
+            IEnumerable<XElement> rows = root.Descendants("Chapter");
+
+            foreach(XElement row in rows)
             {
-                foreach (XmlNode node in doc.ChildNodes)
+                if (row.Descendants("FileName").ToString() == filename)
                 {
-                    DoIterateNode(node, elementVisitor);
+
                 }
             }
         }
 
-        private static void DoIterateNode(XmlNode node, Action<XmlNode> elementVisitor)
+        public static void NewChapterDirectory(Project prj)
         {
-            elementVisitor(node);
+            string file = prj.GetFilepath() + prj.GetTitle() + "\\Cover.xml";
 
-            foreach (XmlNode childNode in node.ChildNodes)
+            XmlWriterSettings settings = new XmlWriterSettings
             {
-                DoIterateNode(childNode, elementVisitor);
+                Indent = true,
+                OmitXmlDeclaration = true
+            };
+
+            using (XmlWriter writer = XmlWriter.Create(file, settings))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Chapters Collection");                         
+
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
             }
         }
-
+        #endregion
     }
+
 }

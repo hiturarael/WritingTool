@@ -64,7 +64,7 @@ namespace Novelis.ProjectMenu
 
         private void BtnManageChptr_Click(object sender, EventArgs e)
         {
-            ChapterManagement.ChapterForm chapterForm = new ChapterManagement.ChapterForm();
+            ChapterManagement.ChapterForm chapterForm = new ChapterManagement.ChapterForm(project);
             chapterForm.ShowDialog();
         }
     }
