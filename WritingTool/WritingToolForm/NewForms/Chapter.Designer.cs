@@ -49,6 +49,10 @@ namespace Novelis.NewForms
             this.DrpDwnFontSize = new System.Windows.Forms.ToolStripComboBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblWordcount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnUndo = new System.Windows.Forms.ToolStripButton();
+            this.btnRedo = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnSettings = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -96,9 +100,13 @@ namespace Novelis.NewForms
             this.toolStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSave,
+            this.btnSettings,
+            this.toolStripSeparator3,
             this.btnCut,
             this.btnCopy,
             this.btnPaste,
+            this.btnUndo,
+            this.btnRedo,
             this.toolStripSeparator2,
             this.btnBold,
             this.btnItalic,
@@ -109,7 +117,7 @@ namespace Novelis.NewForms
             this.DrpDwnFontSize});
             this.toolStrip1.Location = new System.Drawing.Point(15, 71);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(510, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(594, 30);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -120,7 +128,7 @@ namespace Novelis.NewForms
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(33, 28);
+            this.btnSave.Size = new System.Drawing.Size(33, 27);
             this.btnSave.Text = "<";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -131,7 +139,7 @@ namespace Novelis.NewForms
             this.btnCut.Image = ((System.Drawing.Image)(resources.GetObject("btnCut.Image")));
             this.btnCut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCut.Name = "btnCut";
-            this.btnCut.Size = new System.Drawing.Size(30, 28);
+            this.btnCut.Size = new System.Drawing.Size(30, 27);
             this.btnCut.Text = "\"";
             // 
             // btnCopy
@@ -141,7 +149,7 @@ namespace Novelis.NewForms
             this.btnCopy.Image = ((System.Drawing.Image)(resources.GetObject("btnCopy.Image")));
             this.btnCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(26, 28);
+            this.btnCopy.Size = new System.Drawing.Size(26, 27);
             this.btnCopy.Text = "4";
             // 
             // btnPaste
@@ -151,13 +159,13 @@ namespace Novelis.NewForms
             this.btnPaste.Image = ((System.Drawing.Image)(resources.GetObject("btnPaste.Image")));
             this.btnPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPaste.Name = "btnPaste";
-            this.btnPaste.Size = new System.Drawing.Size(26, 28);
+            this.btnPaste.Size = new System.Drawing.Size(26, 27);
             this.btnPaste.Text = "2";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
             // btnBold
             // 
@@ -167,7 +175,7 @@ namespace Novelis.NewForms
             this.btnBold.Image = ((System.Drawing.Image)(resources.GetObject("btnBold.Image")));
             this.btnBold.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBold.Name = "btnBold";
-            this.btnBold.Size = new System.Drawing.Size(23, 28);
+            this.btnBold.Size = new System.Drawing.Size(23, 27);
             this.btnBold.Text = "B";
             this.btnBold.Click += new System.EventHandler(this.BtnBold_Click);
             // 
@@ -178,7 +186,7 @@ namespace Novelis.NewForms
             this.btnItalic.Image = ((System.Drawing.Image)(resources.GetObject("btnItalic.Image")));
             this.btnItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnItalic.Name = "btnItalic";
-            this.btnItalic.Size = new System.Drawing.Size(23, 28);
+            this.btnItalic.Size = new System.Drawing.Size(23, 27);
             this.btnItalic.Text = "I";
             this.btnItalic.Click += new System.EventHandler(this.BtnItalic_Click);
             // 
@@ -189,7 +197,7 @@ namespace Novelis.NewForms
             this.btnUnderline.Image = ((System.Drawing.Image)(resources.GetObject("btnUnderline.Image")));
             this.btnUnderline.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUnderline.Name = "btnUnderline";
-            this.btnUnderline.Size = new System.Drawing.Size(23, 28);
+            this.btnUnderline.Size = new System.Drawing.Size(23, 27);
             this.btnUnderline.Text = "U";
             this.btnUnderline.Click += new System.EventHandler(this.BtnUnderline_Click);
             // 
@@ -200,27 +208,27 @@ namespace Novelis.NewForms
             this.btnStrike.Image = ((System.Drawing.Image)(resources.GetObject("btnStrike.Image")));
             this.btnStrike.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnStrike.Name = "btnStrike";
-            this.btnStrike.Size = new System.Drawing.Size(23, 28);
+            this.btnStrike.Size = new System.Drawing.Size(23, 27);
             this.btnStrike.Text = "S";
             this.btnStrike.Click += new System.EventHandler(this.BtnStrike_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
             // 
             // DrpDwnFontStyle
             // 
             this.DrpDwnFontStyle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DrpDwnFontStyle.Name = "DrpDwnFontStyle";
-            this.DrpDwnFontStyle.Size = new System.Drawing.Size(121, 31);
+            this.DrpDwnFontStyle.Size = new System.Drawing.Size(121, 30);
             this.DrpDwnFontStyle.SelectedIndexChanged += new System.EventHandler(this.DrpDwnFontStyle_SelectedIndexChanged);
             // 
             // DrpDwnFontSize
             // 
             this.DrpDwnFontSize.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DrpDwnFontSize.Name = "DrpDwnFontSize";
-            this.DrpDwnFontSize.Size = new System.Drawing.Size(121, 31);
+            this.DrpDwnFontSize.Size = new System.Drawing.Size(121, 30);
             this.DrpDwnFontSize.SelectedIndexChanged += new System.EventHandler(this.DrpDwnFontSize_SelectedIndexChanged);
             // 
             // statusStrip1
@@ -238,6 +246,41 @@ namespace Novelis.NewForms
             this.lblWordcount.Name = "lblWordcount";
             this.lblWordcount.Size = new System.Drawing.Size(70, 17);
             this.lblWordcount.Text = "Wordcount:";
+            // 
+            // btnUndo
+            // 
+            this.btnUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnUndo.Font = new System.Drawing.Font("Wingdings 3", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnUndo.Image = ((System.Drawing.Image)(resources.GetObject("btnUndo.Image")));
+            this.btnUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(26, 27);
+            this.btnUndo.Text = "P";
+            // 
+            // btnRedo
+            // 
+            this.btnRedo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnRedo.Font = new System.Drawing.Font("Wingdings 3", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnRedo.Image = ((System.Drawing.Image)(resources.GetObject("btnRedo.Image")));
+            this.btnRedo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRedo.Name = "btnRedo";
+            this.btnRedo.Size = new System.Drawing.Size(26, 27);
+            this.btnRedo.Text = "Q";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 30);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSettings.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(28, 27);
+            this.btnSettings.Text = "";
             // 
             // Chapter
             // 
@@ -281,5 +324,9 @@ namespace Novelis.NewForms
         private ToolStripStatusLabel lblWordcount;
         private ToolStripButton btnCut;
         private ToolStripButton btnCopy;
+        private ToolStripButton btnSettings;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton btnUndo;
+        private ToolStripButton btnRedo;
     }
 }

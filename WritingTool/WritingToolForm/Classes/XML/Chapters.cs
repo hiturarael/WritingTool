@@ -18,7 +18,7 @@ namespace Novelis
             bool saveComplete = false;
 
             //save a temp of the file.
-            TextEditor.Save(textBox, filepath, "_temp_",".chp");
+            TextEditor.Save(textBox, filepath, "_temp_chp",".chp");
 
             //check if index exists, if not make it
             if(!Directory.Exists(filepath + "\\index.xml"))
