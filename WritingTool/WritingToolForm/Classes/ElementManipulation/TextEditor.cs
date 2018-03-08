@@ -305,9 +305,9 @@ namespace Novelis
         #endregion
 
         #region Save
-        public static void Save(string filepath, string fileName)
+        public static void Save(RichTextBox textBox ,string filepath, string fileName, string extension)
         {
-            int fileNum = 0;
+            textBox.SaveFile(filepath + fileName + extension, RichTextBoxStreamType.RichText);
         }
         #endregion
     }

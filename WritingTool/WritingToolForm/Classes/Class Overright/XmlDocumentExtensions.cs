@@ -25,6 +25,5 @@ namespace Novelis
                 DoIterateNode(childNode, elementVisitor);
             }
         }
-
     }
 }

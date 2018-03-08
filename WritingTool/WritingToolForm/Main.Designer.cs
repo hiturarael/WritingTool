@@ -76,7 +76,7 @@
             this.btnDelProj.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelProj.Location = new System.Drawing.Point(71, 118);
             this.btnDelProj.Name = "btnDelProj";
-            this.btnDelProj.Size = new System.Drawing.Size(100, 23);
+            this.btnDelProj.Size = new System.Drawing.Size(100, 28);
             this.btnDelProj.TabIndex = 2;
             this.btnDelProj.Text = "Delete Project";
             this.btnDelProj.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             this.btnStats.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStats.Location = new System.Drawing.Point(71, 167);
             this.btnStats.Name = "btnStats";
-            this.btnStats.Size = new System.Drawing.Size(100, 23);
+            this.btnStats.Size = new System.Drawing.Size(100, 27);
             this.btnStats.TabIndex = 3;
             this.btnStats.Text = "Statistics";
             this.btnStats.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             this.brnLoadPrj.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnLoadPrj.Location = new System.Drawing.Point(71, 68);
             this.brnLoadPrj.Name = "brnLoadPrj";
-            this.brnLoadPrj.Size = new System.Drawing.Size(100, 23);
+            this.brnLoadPrj.Size = new System.Drawing.Size(100, 27);
             this.brnLoadPrj.TabIndex = 1;
             this.brnLoadPrj.Text = "Load Project";
             this.brnLoadPrj.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.btnNewPrj.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewPrj.Location = new System.Drawing.Point(71, 19);
             this.btnNewPrj.Name = "btnNewPrj";
-            this.btnNewPrj.Size = new System.Drawing.Size(100, 23);
+            this.btnNewPrj.Size = new System.Drawing.Size(100, 27);
             this.btnNewPrj.TabIndex = 0;
             this.btnNewPrj.Text = "New Project";
             this.btnNewPrj.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 385);
+            this.ClientSize = new System.Drawing.Size(671, 395);
             this.Controls.Add(this.lblVrsnNum);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpBoxLoadPrj);

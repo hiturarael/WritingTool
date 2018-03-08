@@ -99,8 +99,7 @@ namespace Novelis.NewForms
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
-            TextEditor.Save(project.GetChapterFilepath(), "prj_chp_");
+            Chapters.SaveChapter(rtbChapter, project, project.GetChapterFilepath());
         }
     }
 }

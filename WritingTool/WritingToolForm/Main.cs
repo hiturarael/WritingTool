@@ -81,7 +81,7 @@ namespace Novelis
 
             //fill project data
             prj.SetTitle(projectName);
-            Project.GetCoverXML(filepath, prj);
+            Cover.GetCoverXML(filepath, prj);
 
             //display the menu
             ProjectMenu.ProjectMenu menu = new ProjectMenu.ProjectMenu(prj);

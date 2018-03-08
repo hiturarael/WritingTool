@@ -64,6 +64,8 @@ namespace Novelis.ProjectMenu
 
         private void BtnManageChptr_Click(object sender, EventArgs e)
         {
+            Novelis.CheckFilepathExists(project.GetFilepath()+"\\Chapters");
+
             ChapterManagement.ChapterForm chapterForm = new ChapterManagement.ChapterForm(project);
             chapterForm.ShowDialog();
         }
