@@ -101,5 +101,10 @@ namespace Novelis.NewForms
         {
             Chapters.SaveChapter(rtbChapter, project, project.GetChapterFilepath());
         }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
